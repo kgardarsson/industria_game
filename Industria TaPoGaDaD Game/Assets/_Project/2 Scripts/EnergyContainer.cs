@@ -1,11 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class EnergyContainer : MonoBehaviour {
 
     public uint energyItTakes;
     public bool on;
+
+    public UnityEvent OnInteract;
 
     void Start() {
         
@@ -29,5 +32,7 @@ public class EnergyContainer : MonoBehaviour {
             }
         }
         FindObjectOfType<EnergyMeter>().updateEnergyMeter();
+
+        OnInteract.Invoke();
     }
 }

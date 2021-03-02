@@ -8,7 +8,8 @@ public class CameraMovement : MonoBehaviour
     float rotationOnX;
     float mouseSensitivity = 90f;
     public Transform Player;
-
+    public float interactDistance = 5;
+    public LayerMask interactLayer;
 
 
     // Start is called before the first frame update
@@ -33,5 +34,20 @@ public class CameraMovement : MonoBehaviour
 
         //Rotate left and right
         Player.Rotate(Vector3.up * m_X);
+
+
+        // Raycasting
+        RaycastHit hit;
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        if (Physics.Raycast(ray, out hit, interactDistance, interactLayer))
+        {
+            if (hit.collider.gameObject.tag == "Button") {
+                hit.collider.gameObject.GetComponent<EnergyContainer>().interact();
+            }
+        }
+        else
+        {
+            // Debug.Log("Did not Hit");
+        }
     }
 }

@@ -6,6 +6,7 @@ TagManager:
   tags:
   - DoorButton
   - LightButton
+  - Button
   layers:
   - Default
   - TransparentFX
