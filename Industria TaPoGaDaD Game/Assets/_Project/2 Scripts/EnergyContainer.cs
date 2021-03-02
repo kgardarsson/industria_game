@@ -8,16 +8,15 @@ public class EnergyContainer : MonoBehaviour {
     public uint energyItTakes;
     public bool on;
 
-    public UnityEvent OnInteract;
+    public UnityEvent On;
+    public UnityEvent Off;
 
     void Start() {
         
     }
 
     void Update() {
-        if (Input.anyKeyDown) {
-            interact();
-        }
+
     }
 
     public void interact() {
@@ -33,6 +32,12 @@ public class EnergyContainer : MonoBehaviour {
         }
         FindObjectOfType<EnergyMeter>().updateEnergyMeter();
 
-        OnInteract.Invoke();
+        if (on)
+        {
+            On.Invoke();
+        } else
+        {
+            Off.Invoke();
+        }
     }
 }
