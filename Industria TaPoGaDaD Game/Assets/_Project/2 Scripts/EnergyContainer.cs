@@ -12,9 +12,9 @@ public class EnergyContainer : MonoBehaviour {
     }
 
     void Update() {
-        // if (Input.anyKeyDown) {
-        //     interact();
-        // }
+        if (Input.anyKeyDown) {
+            interact();
+        }
     }
 
     public void interact() {
@@ -28,5 +28,6 @@ public class EnergyContainer : MonoBehaviour {
                 on = !on;
             }
         }
+        FindObjectOfType<EnergyMeter>().updateEnergyMeter();
     }
 }
