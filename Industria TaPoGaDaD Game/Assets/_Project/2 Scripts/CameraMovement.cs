@@ -35,19 +35,26 @@ public class CameraMovement : MonoBehaviour
         //Rotate left and right
         Player.Rotate(Vector3.up * m_X);
 
-
+        print("mouseclick");
         // Raycasting
-        RaycastHit hit;
+    RaycastHit hit;
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         if (Physics.Raycast(ray, out hit, interactDistance, interactLayer))
         {
-            if (hit.collider.gameObject.tag == "Button") {
-                hit.collider.gameObject.GetComponent<EnergyContainer>().interact();
+            print("hit something");
+            if (Input.GetMouseButtonDown(0)) {
+                if (hit.collider.gameObject.tag == "Button") {
+                    hit.collider.gameObject.GetComponent<EnergyContainer>().interact();
+                } 
             }
         }
         else
         {
             // Debug.Log("Did not Hit");
-        }
+
+    }
+
+
+        
     }
 }
