@@ -20,10 +20,12 @@ public class CodeLock : MonoBehaviour
     private void Start()
     {
         codeLength = code.Length;
+        resetCode();
     }
 
     void CheckCode()
     {
+        text.faceColor = Color.green;
         if (attemptedCode == code)
         {
             LockDoor.Invoke();
@@ -31,6 +33,7 @@ public class CodeLock : MonoBehaviour
         else
         {
             Debug.Log("Wrong Code");
+            text.faceColor = Color.red;
         }
     }
 
@@ -39,8 +42,14 @@ public class CodeLock : MonoBehaviour
     {
         placeInCode++;
 
-        if (placeInCode <= codeLength)
+        if (placeInCode == 0)
         {
+            attemptedCode += value;
+            text.SetText(attemptedCode.ToString());
+        }
+        else if (placeInCode <= codeLength)
+        {
+            text.faceColor = Color.black;
             attemptedCode += value;
             text.SetText(attemptedCode.ToString());
         }
@@ -52,5 +61,12 @@ public class CodeLock : MonoBehaviour
             attemptedCode = "";
             placeInCode = 0;
         }
+    }
+
+    public void resetCode()
+    {
+        attemptedCode = "";
+        text.SetText("Put in code");
+        text.faceColor = Color.black;
     }
 }
