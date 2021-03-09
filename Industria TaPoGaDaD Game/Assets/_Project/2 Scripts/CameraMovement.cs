@@ -42,19 +42,21 @@ public class CameraMovement : MonoBehaviour
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         if (Physics.Raycast(ray, out hit, interactDistance, interactLayer))
         {
-            if (Input.GetMouseButtonDown(0)) {
-                if (hit.collider.gameObject.tag == "Button") {
+            if (Input.GetMouseButtonDown(0))
+            {
+                if (hit.collider.gameObject.tag == "Button")
+                {
                     hit.collider.gameObject.GetComponent<EnergyContainer>().interact();
-                } 
+                }
             }
         }
         else
         {
             // Debug.Log("Did not Hit");
 
-    }
+        }
 
 
-        
+
     }
 }

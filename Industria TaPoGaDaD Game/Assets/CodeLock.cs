@@ -1,8 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
+using UnityEngine.UI;
+using TMPro;
 
-public class CodeLock : MonoBehaviour 
+public class CodeLock : MonoBehaviour
 {
 
     int codeLength;
@@ -11,7 +14,8 @@ public class CodeLock : MonoBehaviour
     public string code = "";
     public string attemptedCode;
 
-    public Transform toOpen;
+    public UnityEvent LockDoor;
+    public TextMeshProUGUI text;
 
     private void Start()
     {
@@ -20,9 +24,9 @@ public class CodeLock : MonoBehaviour
 
     void CheckCode()
     {
-        if(attemptedCode == code)
+        if (attemptedCode == code)
         {
-            StartCoroutine(Open());
+            LockDoor.Invoke();
         }
         else
         {
@@ -30,30 +34,23 @@ public class CodeLock : MonoBehaviour
         }
     }
 
-    IEnumerator Open()
-    {
-        toOpen.Rotate(new Vector3(0, 90, 0), Space.World);
 
-        yield return new WaitForSeconds(10);
-
-        toOpen.Rotate(new Vector3(0, -90, 0), Space.World);
-    }
-
-    public void SetValue (string value)
+    public void SetValue(string value)
     {
         placeInCode++;
 
-        if(placeInCode <= codeLength)
+        if (placeInCode <= codeLength)
         {
             attemptedCode += value;
+            text.SetText(attemptedCode.ToString());
         }
 
-        if(placeInCode == codeLength)
+        if (placeInCode == codeLength)
         {
             CheckCode();
 
             attemptedCode = "";
-            placeInCode = 0;        
+            placeInCode = 0;
         }
     }
 }
