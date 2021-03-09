@@ -13,7 +13,7 @@ public class CursorPicker : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        inRangeOfButton = FindObjectOfType<CameraMovement>().inRangeOfButton;
+        inRangeOfButton = FindObjectOfType<Interactor>().inRangeOfButton;
         if (inRangeOfButton == true)
         {
             Button.Invoke();

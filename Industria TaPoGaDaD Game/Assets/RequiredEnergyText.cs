@@ -21,7 +21,7 @@ public class RequiredEnergyText : MonoBehaviour
 
     public void UpdateEnergyMeter()
     {
-        energyItTakes = FindObjectOfType<CameraMovement>().energyItTakes;
+        energyItTakes = FindObjectOfType<Interactor>().energyItTakes;
         GetComponent<Text>().text = energyItTakes.ToString();
     }
 }
