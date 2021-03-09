@@ -6,9 +6,14 @@ public class DoorController : MonoBehaviour
 {
     private Animator animator;
     // Start is called before the first frame update
-    void Start()
+
+    private void Awake()
     {
         animator = GetComponent<Animator>();
+    }
+
+    void Start()
+    {
     }
 
     public void Open(bool open)
