@@ -25,7 +25,10 @@ public class EnergyContainer : MonoBehaviour {
     public UnityEvent On;
     public UnityEvent Off;
 
+    private AudioSource sfx;
+
     void Start() {
+        sfx = GetComponent<AudioSource>();
         rend = GetComponent<Renderer>();
         rend.material.color = on ? Color.green : Color.red;
         StartStates();
@@ -66,6 +69,7 @@ public class EnergyContainer : MonoBehaviour {
         }
         rend.material.color = on ? Color.green : Color.red;
         FindObjectOfType<EnergyMeter>().updateEnergyMeter();
+        sfx.PlayOneShot(sfx.clip);
     }
         public void StartStates()
         {
