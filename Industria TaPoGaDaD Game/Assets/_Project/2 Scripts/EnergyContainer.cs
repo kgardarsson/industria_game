@@ -7,6 +7,19 @@ public class EnergyContainer : MonoBehaviour {
 
     public uint energyItTakes;
     public bool on;
+    [SerializeField]
+    private bool _locked;
+    public bool Locked {
+        get { return _locked; }
+        set {
+            _locked = value;
+            if (on) {
+                On.Invoke();
+            } else {
+                Off.Invoke();
+            }
+        }
+    }
     Renderer rend;
 
     public UnityEvent On;
@@ -15,6 +28,11 @@ public class EnergyContainer : MonoBehaviour {
     void Start() {
         rend = GetComponent<Renderer>();
         rend.material.color = on ? Color.green : Color.red;
+        // if(on) {
+        //     On.Invoke();
+        // } else {
+        //     Off.Invoke();
+        // }
     }
 
     void Update() {
@@ -26,12 +44,16 @@ public class EnergyContainer : MonoBehaviour {
         if (on) {
             em.energy += this.energyItTakes;
             on = false;
-            Off.Invoke();
+            if(!_locked) {
+                Off.Invoke();
+            }
         } else {
             if(em.energy >= this.energyItTakes) {
                 em.energy -= this.energyItTakes;
                 on = true;
-                On.Invoke();
+                if(!_locked) {
+                    On.Invoke();
+                }
             }
         }
         rend.material.color = on ? Color.green : Color.red;
