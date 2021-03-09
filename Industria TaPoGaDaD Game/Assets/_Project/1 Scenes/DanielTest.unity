@@ -10039,7 +10039,7 @@ PrefabInstance:
     - target: {fileID: 7903812588514211003, guid: b806f77e4847a408bae6715f2905e8c3,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 6.48
+      value: 6.559
       objectReference: {fileID: 0}
     - target: {fileID: 7903812588514211003, guid: b806f77e4847a408bae6715f2905e8c3,
         type: 3}
@@ -25085,7 +25085,7 @@ PrefabInstance:
     - target: {fileID: 7457969802924927664, guid: 164ee0ae190e21045af1818074290b29,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.5
+      value: 6.06
       objectReference: {fileID: 0}
     - target: {fileID: 7457969802924927664, guid: 164ee0ae190e21045af1818074290b29,
         type: 3}
@@ -25121,6 +25121,51 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7457969802924927668, guid: 164ee0ae190e21045af1818074290b29,
+        type: 3}
+      propertyPath: m_Mass
+      value: 0.0000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 7457969802924927668, guid: 164ee0ae190e21045af1818074290b29,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 112
+      objectReference: {fileID: 0}
+    - target: {fileID: 7457969802924927668, guid: 164ee0ae190e21045af1818074290b29,
+        type: 3}
+      propertyPath: m_Interpolate
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7457969802924927668, guid: 164ee0ae190e21045af1818074290b29,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7457969802924927669, guid: 164ee0ae190e21045af1818074290b29,
+        type: 3}
+      propertyPath: m_Height
+      value: 2.251167
+      objectReference: {fileID: 0}
+    - target: {fileID: 7457969802924927669, guid: 164ee0ae190e21045af1818074290b29,
+        type: 3}
+      propertyPath: m_Radius
+      value: 1.2901372
+      objectReference: {fileID: 0}
+    - target: {fileID: 7457969802924927669, guid: 164ee0ae190e21045af1818074290b29,
+        type: 3}
+      propertyPath: m_Center.x
+      value: -0.04559636
+      objectReference: {fileID: 0}
+    - target: {fileID: 7457969802924927669, guid: 164ee0ae190e21045af1818074290b29,
+        type: 3}
+      propertyPath: m_Center.z
+      value: -0.03403175
+      objectReference: {fileID: 0}
+    - target: {fileID: 7457969802924927670, guid: 164ee0ae190e21045af1818074290b29,
+        type: 3}
+      propertyPath: m_MotionVectors
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7457969802924927674, guid: 164ee0ae190e21045af1818074290b29,
         type: 3}
