@@ -197,8 +197,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7903812588514211003}
-  - component: {fileID: 3201589977330161085}
-  - component: {fileID: 4853487300852955023}
   - component: {fileID: 331865673642775089}
   m_Layer: 0
   m_Name: Door
@@ -223,31 +221,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3201589977330161085
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6401746235473253212}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ce9b3a2bb545342a88fac57a62539cb8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &4853487300852955023
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6401746235473253212}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8eebda8c5c8f842f9832769563eb39dc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  door1: {fileID: 3201589977330161085}
 --- !u!95 &331865673642775089
 Animator:
   serializedVersion: 3
@@ -256,7 +229,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6401746235473253212}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: bbf8786455eae4a8483c744ba7f9c8b0, type: 2}
   m_CullingMode: 0
