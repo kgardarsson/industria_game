@@ -28,11 +28,7 @@ public class EnergyContainer : MonoBehaviour {
     void Start() {
         rend = GetComponent<Renderer>();
         rend.material.color = on ? Color.green : Color.red;
-        // if(on) {
-        //     On.Invoke();
-        // } else {
-        //     Off.Invoke();
-        // }
+        StartStates();
     }
 
     void Update() {
@@ -41,7 +37,7 @@ public class EnergyContainer : MonoBehaviour {
 
     private void Awake()
     {
-        StartStates();
+        //StartStates();
     }
 
     public void interact()
