@@ -8,9 +8,14 @@ public class CameraMovement : MonoBehaviour
     float rotationOnX;
     float mouseSensitivity = 90f;
     public Transform Player;
+<<<<<<< Updated upstream
+=======
     public float interactDistance = 5;
     public float rayRadius = 5;
     public LayerMask interactLayer;
+    public uint energyItTakes;
+    public bool inRangeOfButton = false;
+>>>>>>> Stashed changes
 
 
     // Start is called before the first frame update
@@ -37,26 +42,40 @@ public class CameraMovement : MonoBehaviour
         Player.Rotate(Vector3.up * m_X);
 
 
+<<<<<<< Updated upstream
+=======
         // Raycasting
         RaycastHit hit;
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         if (Physics.Raycast(ray, out hit, interactDistance, interactLayer))
         {
-            if (Input.GetMouseButtonDown(0))
+            
+            if (hit.collider.gameObject.tag == "Button")
             {
-                if (hit.collider.gameObject.tag == "Button")
+                energyItTakes = hit.collider.gameObject.GetComponent<EnergyContainer>().energyItTakes;
+                GetComponent<RequiredEnergyText>().UpdateEnergyMeter();
+                inRangeOfButton = true;
+
+                if (Input.GetMouseButtonDown(0))
                 {
                     hit.collider.gameObject.GetComponent<EnergyContainer>().interact();
+                    
+                    
                 }
             }
         }
         else
         {
+            energyItTakes = 0;
+            inRangeOfButton = false;
             // Debug.Log("Did not Hit");
 
         }
 
 
+>>>>>>> Stashed changes
 
     }
+
+
 }

@@ -7,6 +7,7 @@ TagManager:
   - DoorButton
   - LightButton
   - Button
+  - Computer
   layers:
   - Default
   - TransparentFX
