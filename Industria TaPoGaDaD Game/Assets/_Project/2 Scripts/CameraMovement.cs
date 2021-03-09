@@ -9,6 +9,7 @@ public class CameraMovement : MonoBehaviour
     float mouseSensitivity = 90f;
     public Transform Player;
     public float interactDistance = 5;
+    public float rayRadius = 5;
     public LayerMask interactLayer;
 
 
@@ -35,13 +36,12 @@ public class CameraMovement : MonoBehaviour
         //Rotate left and right
         Player.Rotate(Vector3.up * m_X);
 
-        print("mouseclick");
+
         // Raycasting
-    RaycastHit hit;
+        RaycastHit hit;
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         if (Physics.Raycast(ray, out hit, interactDistance, interactLayer))
         {
-            print("hit something");
             if (Input.GetMouseButtonDown(0)) {
                 if (hit.collider.gameObject.tag == "Button") {
                     hit.collider.gameObject.GetComponent<EnergyContainer>().interact();
