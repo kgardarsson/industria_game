@@ -39,32 +39,47 @@ public class EnergyContainer : MonoBehaviour {
 
     }
 
-    public void interact() {
+    private void Awake()
+    {
+        StartStates();
+    }
+
+    public void interact()
+    {
         EnergyManager em = FindObjectOfType<EnergyManager>();
-        if (on) {
+        if (on)
+        {
             em.energy += this.energyItTakes;
             on = false;
-            if(!_locked) {
+            if (!_locked)
+            {
                 Off.Invoke();
             }
-        } else {
-            if(em.energy >= this.energyItTakes) {
+        }
+        else
+        {
+            if (em.energy >= this.energyItTakes)
+            {
                 em.energy -= this.energyItTakes;
                 on = true;
-                if(!_locked) {
+                if (!_locked)
+                {
                     On.Invoke();
                 }
             }
         }
         rend.material.color = on ? Color.green : Color.red;
         FindObjectOfType<EnergyMeter>().updateEnergyMeter();
-
-        // if (on)
-        // {
-        //     On.Invoke();
-        // } else
-        // {
-        //     Off.Invoke();
-        // }
     }
+        public void StartStates()
+        {
+            if (on)
+            {
+                On.Invoke();
+            } else
+            {
+                Off.Invoke();
+            }
+        }
+    
 }
