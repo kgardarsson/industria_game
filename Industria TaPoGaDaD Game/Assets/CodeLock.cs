@@ -29,6 +29,8 @@ public class CodeLock : MonoBehaviour
         if (attemptedCode == code)
         {
             LockDoor.Invoke();
+            AudioSource sfx = GetComponent<AudioSource>();
+            sfx.PlayOneShot(sfx.clip);
         }
         else
         {
@@ -61,6 +63,8 @@ public class CodeLock : MonoBehaviour
             attemptedCode = "";
             placeInCode = 0;
         }
+        AudioSource sfx = transform.GetChild(int.Parse(value)).GetComponent<AudioSource>();
+        sfx.PlayOneShot(sfx.clip);
     }
 
     public void resetCode()
