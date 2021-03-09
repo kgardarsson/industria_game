@@ -508,8 +508,19 @@ MonoBehaviour:
   Dot:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4609327864217512485}
-        m_MethodName: SetActive
+      - m_Target: {fileID: 5073399325034111140}
+        m_MethodName: set_cull
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 3626734012733936512}
+        m_MethodName: set_cull
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -519,8 +530,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 1535243841165790327}
-        m_MethodName: SetActive
+      - m_Target: {fileID: 5018072759098085518}
+        m_MethodName: set_enabled
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -533,8 +544,19 @@ MonoBehaviour:
   Button:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4609327864217512485}
-        m_MethodName: SetActive
+      - m_Target: {fileID: 5073399325034111140}
+        m_MethodName: set_cull
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 1
+      - m_Target: {fileID: 3626734012733936512}
+        m_MethodName: set_cull
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -544,8 +566,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 1
-      - m_Target: {fileID: 1535243841165790327}
-        m_MethodName: SetActive
+      - m_Target: {fileID: 5018072759098085518}
+        m_MethodName: set_enabled
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
