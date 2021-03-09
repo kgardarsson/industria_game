@@ -19,6 +19,8 @@ public class DoorController : MonoBehaviour
     public void Open(bool open)
     {
         animator.SetBool("Open", open);
+        BoxCollider collider = GetComponent<BoxCollider>();
+        collider.enabled = !open;
     }
 
     public void Lock(bool locked)
