@@ -8389,7 +8389,7 @@ MonoBehaviour:
   LockDoor:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1094118998}
         m_MethodName: Lock
         m_Mode: 6
         m_Arguments:
