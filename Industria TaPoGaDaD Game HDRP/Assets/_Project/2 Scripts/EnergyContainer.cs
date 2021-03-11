@@ -30,7 +30,9 @@ public class EnergyContainer : MonoBehaviour {
     void Start() {
         sfx = GetComponent<AudioSource>();
         rend = GetComponent<Renderer>();
-        rend.material.color = on ? Color.green : Color.red;
+        
+        SetColor();
+
         StartStates();
     }
 
@@ -67,7 +69,7 @@ public class EnergyContainer : MonoBehaviour {
                 }
             }
         }
-        rend.material.color = on ? Color.green : Color.red;
+        SetColor();
         FindObjectOfType<EnergyMeter>().updateEnergyMeter();
         sfx.PlayOneShot(sfx.clip);
     }
@@ -79,6 +81,16 @@ public class EnergyContainer : MonoBehaviour {
             } else
             {
                 Off.Invoke();
+            }
+        }
+
+
+        private void SetColor(){
+            if (on) {
+                rend.material.SetColor("_BaseColor", Color.green);
+            }
+            else {
+                rend.material.SetColor("_BaseColor", Color.red);
             }
         }
     
