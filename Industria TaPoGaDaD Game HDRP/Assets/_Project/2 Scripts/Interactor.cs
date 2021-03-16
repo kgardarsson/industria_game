@@ -34,19 +34,20 @@ public class Interactor : MonoBehaviour
                 {
                     hit.collider.gameObject.GetComponent<EnergyContainer>().interact();
                 }
+            } else {
+                energyItTakes = 0;
+                inRangeOfButton = false;
             }
-            if (hit.collider.gameObject.tag == "Computer")
-            {
-                if (Input.GetMouseButtonDown(0))
-                {
-                    hit.transform.gameObject.GetComponentInParent<CodeLock>().SetValue(hit.transform.name);
-                }
-            }
+            // if (hit.collider.gameObject.tag == "Computer")
+            // {
+            //     if (Input.GetMouseButtonDown(0))
+            //     {
+            //         hit.transform.gameObject.GetComponent<CodeInput>().PressCode();
+            //     }
+            // }
         }
         else
         {
-            energyItTakes = 0;
-            inRangeOfButton = false;
             // Debug.Log("Did not Hit");
 
         }

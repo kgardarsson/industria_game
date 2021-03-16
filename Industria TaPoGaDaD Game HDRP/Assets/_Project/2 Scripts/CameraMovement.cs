@@ -6,7 +6,7 @@ public class CameraMovement : MonoBehaviour
 {
     //Variables
     float rotationOnX;
-    float mouseSensitivity = 90f;
+    [SerializeField] float mouseSensitivity = 90f;
     public Transform Player;
 
 

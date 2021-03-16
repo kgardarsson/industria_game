@@ -11,11 +11,19 @@ public class CodeLock : MonoBehaviour
     int codeLength;
     int placeInCode;
 
+    [SerializeField]
+    [Multiline]
+    string defaultText;
     public string code = "";
     public string attemptedCode;
 
     public UnityEvent LockDoor;
-    public TextMeshProUGUI text;
+    [SerializeField] private TextMeshProUGUI text;
+
+    private void Awake()
+    {
+        text = gameObject.GetComponent<TextMeshProUGUI>();
+    }
 
     private void Start()
     {
@@ -25,12 +33,12 @@ public class CodeLock : MonoBehaviour
 
     void CheckCode()
     {
-        text.faceColor = Color.green;
         if (attemptedCode == code)
         {
             LockDoor.Invoke();
-            AudioSource sfx = GetComponent<AudioSource>();
-            sfx.PlayOneShot(sfx.clip);
+            text.faceColor = new Color(0, 0.7f, 0, 1);
+            // AudioSource sfx = GetComponent<AudioSource>();
+            // sfx.PlayOneShot(sfx.clip);
         }
         else
         {
@@ -63,14 +71,14 @@ public class CodeLock : MonoBehaviour
             attemptedCode = "";
             placeInCode = 0;
         }
-        AudioSource sfx = transform.GetChild(int.Parse(value)).GetComponent<AudioSource>();
-        sfx.PlayOneShot(sfx.clip);
+        // AudioSource sfx = transform.GetChild(int.Parse(value)).GetComponent<AudioSource>();
+        // sfx.PlayOneShot(sfx.clip);
     }
 
     public void resetCode()
     {
         attemptedCode = "";
-        text.SetText("Put in code");
+        text.SetText(defaultText);
         text.faceColor = Color.black;
     }
 }
