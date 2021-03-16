@@ -7,6 +7,18 @@ public class CodeInput : MonoBehaviour
 {
     private bool inputReady;
     private CodeLock CodeLock;
+    private static int sfxSize = 10;
+    private AudioClip[] sfx = new AudioClip[sfxSize];
+
+    private void Awake() {
+        // foreach (var item in sfx)
+        // {
+        //     sfx[i] = (AudioClip)Resources.Load("Audio/SFX/Button", typeof(AudioClip));
+        // }
+        for (int i = 0; i < sfxSize; i++) {
+            sfx[i] = (AudioClip)Resources.Load("Audio/SFX/Computer/"+i, typeof(AudioClip));
+        }
+    }
 
     private void Start()
     {
@@ -22,6 +34,7 @@ public class CodeInput : MonoBehaviour
             {
                 Debug.Log("Pressed key: " + number);
                 CodeLock.SetValue(number.ToString());
+                AudioSource.PlayClipAtPoint(sfx[number], transform.position);
             }
 
             // foreach (KeyCode kcode in Enum.GetValues(typeof(KeyCode)))
