@@ -17,16 +17,24 @@ public class CodeInput : MonoBehaviour
     {
         if (inputReady)
         {
-            foreach (KeyCode kcode in Enum.GetValues(typeof(KeyCode)))
+            int number;
+            if (int.TryParse(Input.inputString, out number))
             {
-                Char input = (char)kcode;
-                bool isDigit = char.IsDigit((char)kcode);
-                if (Input.GetKeyDown(kcode) && isDigit)
-                {
-                    // Debug.Log("KeyCode down: " + (char)kcode);
-                    CodeLock.SetValue("" + input);
-                }
+                Debug.Log("Pressed key: " + number);
+                CodeLock.SetValue(number.ToString());
             }
+
+            // foreach (KeyCode kcode in Enum.GetValues(typeof(KeyCode)))
+            // {
+            //     // Debug.Log((char)kcode);
+            //     Char input = (char)kcode;
+            //     bool isDigit = char.IsDigit((char)kcode);
+            //     if (Input.GetKeyDown(kcode) && isDigit)
+            //     {
+            //         Debug.Log("KeyCode down: " + kcode.ToString());
+            //         CodeLock.SetValue("" + input);
+            //     }
+            // }
 
         }
     }
@@ -40,5 +48,7 @@ public class CodeInput : MonoBehaviour
     {
         inputReady = false;
     }
+
+
 
 }
