@@ -34,7 +34,9 @@ public class Interactor : MonoBehaviour
                 {
                     hit.collider.gameObject.GetComponent<EnergyContainer>().interact();
                 }
-            } else {
+            }
+            else
+            {
                 energyItTakes = 0;
                 inRangeOfButton = false;
             }
@@ -48,6 +50,7 @@ public class Interactor : MonoBehaviour
         }
         else
         {
+            inRangeOfButton = false;
             // Debug.Log("Did not Hit");
 
         }
