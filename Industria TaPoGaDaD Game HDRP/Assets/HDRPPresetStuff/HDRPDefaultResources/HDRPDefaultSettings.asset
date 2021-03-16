@@ -197,7 +197,7 @@ MonoBehaviour:
     m_Value: 0
   compensation:
     m_OverrideState: 0
-    m_Value: 0
+    m_Value: 1.37
   limitMin:
     m_OverrideState: 1
     m_Value: -3.13
@@ -205,25 +205,25 @@ MonoBehaviour:
     m_OverrideState: 1
     m_Value: 10
   curveMap:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
-        time: -10
-        value: -10
-        inSlope: 0
+        time: 0
+        value: 0
+        inSlope: 1
         outSlope: 1
-        tangentMode: 0
+        tangentMode: 34
         weightedMode: 0
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
-        time: 20
-        value: 20
+        time: 1
+        value: 1
         inSlope: 1
-        outSlope: 0
-        tangentMode: 0
+        outSlope: 1
+        tangentMode: 34
         weightedMode: 0
         inWeight: 0
         outWeight: 0
