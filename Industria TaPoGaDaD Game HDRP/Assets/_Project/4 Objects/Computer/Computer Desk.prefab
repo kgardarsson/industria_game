@@ -2758,7 +2758,7 @@ MonoBehaviour:
   m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 546bac8e609d2443da2c8c36e5b712a7, type: 2}
-  m_sharedMaterial: {fileID: 7613830644845195463, guid: 546bac8e609d2443da2c8c36e5b712a7,
+  m_sharedMaterial: {fileID: -5211193702258946374, guid: 546bac8e609d2443da2c8c36e5b712a7,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -3126,7 +3126,7 @@ MonoBehaviour:
   m_text: Type code to\n lock door
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 546bac8e609d2443da2c8c36e5b712a7, type: 2}
-  m_sharedMaterial: {fileID: 7613830644845195463, guid: 546bac8e609d2443da2c8c36e5b712a7,
+  m_sharedMaterial: {fileID: -5211193702258946374, guid: 546bac8e609d2443da2c8c36e5b712a7,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
