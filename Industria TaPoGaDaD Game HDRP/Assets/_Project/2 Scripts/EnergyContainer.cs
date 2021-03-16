@@ -3,19 +3,26 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class EnergyContainer : MonoBehaviour {
+public class EnergyContainer : MonoBehaviour
+{
 
     public uint energyItTakes;
+    private EnergyAnimationManager eam;
     public bool on;
     [SerializeField]
     private bool _locked;
-    public bool Locked {
+    public bool Locked
+    {
         get { return _locked; }
-        set {
+        set
+        {
             _locked = value;
-            if (on) {
+            if (on)
+            {
                 On.Invoke();
-            } else {
+            }
+            else
+            {
                 Off.Invoke();
             }
         }
@@ -29,13 +36,16 @@ public class EnergyContainer : MonoBehaviour {
     private AudioClip sfxNegative;
     void Start() {
         rend = GetComponent<Renderer>();
-        
+
         SetColor();
 
         StartStates();
+
+        eam = GameObject.FindObjectOfType<EnergyAnimationManager>();
     }
 
-    void Update() {
+    void Update()
+    {
 
     }
 
@@ -56,6 +66,7 @@ public class EnergyContainer : MonoBehaviour {
             if (!_locked)
             {
                 Off.Invoke();
+                eam.MoveToTotal();
             }
             AudioSource.PlayClipAtPoint(sfx, transform.position);
 
@@ -67,6 +78,7 @@ public class EnergyContainer : MonoBehaviour {
                 if (!_locked)
                 {
                     On.Invoke();
+                    eam.MoveToCenter();
                 }
                 AudioSource.PlayClipAtPoint(sfx, transform.position);
 
@@ -78,25 +90,29 @@ public class EnergyContainer : MonoBehaviour {
         SetColor();
         FindObjectOfType<EnergyMeter>().updateEnergyMeter();
     }
-        public void StartStates()
+    public void StartStates()
+    {
+        if (on)
         {
-            if (on)
-            {
-                On.Invoke();
-            } else
-            {
-                Off.Invoke();
-            }
+            On.Invoke();
         }
+        else
+        {
+            Off.Invoke();
+        }
+    }
 
 
-        private void SetColor(){
-            if (on) {
-                rend.material.SetColor("_BaseColor", Color.green);
-            }
-            else {
-                rend.material.SetColor("_BaseColor", Color.red);
-            }
+    private void SetColor()
+    {
+        if (on)
+        {
+            rend.material.SetColor("_BaseColor", Color.green);
         }
-    
+        else
+        {
+            rend.material.SetColor("_BaseColor", Color.red);
+        }
+    }
+
 }
