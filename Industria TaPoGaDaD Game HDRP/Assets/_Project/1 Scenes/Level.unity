@@ -32926,31 +32926,6 @@ PrefabInstance:
       propertyPath: m_AllowMSAA
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7457969803587988572, guid: 164ee0ae190e21045af1818074290b29,
-        type: 3}
-      propertyPath: field of view
-      value: 54.798424
-      objectReference: {fileID: 0}
-    - target: {fileID: 7457969803587988572, guid: 164ee0ae190e21045af1818074290b29,
-        type: 3}
-      propertyPath: m_FocalLength
-      value: 18
-      objectReference: {fileID: 0}
-    - target: {fileID: 7457969803587988572, guid: 164ee0ae190e21045af1818074290b29,
-        type: 3}
-      propertyPath: m_SensorSize.x
-      value: 24.89
-      objectReference: {fileID: 0}
-    - target: {fileID: 7457969803587988572, guid: 164ee0ae190e21045af1818074290b29,
-        type: 3}
-      propertyPath: m_SensorSize.y
-      value: 18.66
-      objectReference: {fileID: 0}
-    - target: {fileID: 7457969803587988572, guid: 164ee0ae190e21045af1818074290b29,
-        type: 3}
-      propertyPath: m_projectionMatrixMode
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 7457969803587988576, guid: 164ee0ae190e21045af1818074290b29,
         type: 3}
       propertyPath: m_Layer
