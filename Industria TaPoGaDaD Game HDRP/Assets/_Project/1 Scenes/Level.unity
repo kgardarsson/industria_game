@@ -16980,6 +16980,41 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1470754988}
     m_Modifications:
+    - target: {fileID: 1674236561360458150, guid: d6f9e6957a55f438384f19a3812eea74,
+        type: 3}
+      propertyPath: LockDoor.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1674236561360458150, guid: d6f9e6957a55f438384f19a3812eea74,
+        type: 3}
+      propertyPath: LockDoor.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1674236561360458150, guid: d6f9e6957a55f438384f19a3812eea74,
+        type: 3}
+      propertyPath: LockDoor.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1216170991}
+    - target: {fileID: 1674236561360458150, guid: d6f9e6957a55f438384f19a3812eea74,
+        type: 3}
+      propertyPath: LockDoor.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1674236561360458150, guid: d6f9e6957a55f438384f19a3812eea74,
+        type: 3}
+      propertyPath: LockDoor.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: set_Locked
+      objectReference: {fileID: 0}
+    - target: {fileID: 1674236561360458150, guid: d6f9e6957a55f438384f19a3812eea74,
+        type: 3}
+      propertyPath: LockDoor.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1674236561360458150, guid: d6f9e6957a55f438384f19a3812eea74,
+        type: 3}
+      propertyPath: LockDoor.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 1765729213987197484, guid: d6f9e6957a55f438384f19a3812eea74,
         type: 3}
       propertyPath: m_IsActive
