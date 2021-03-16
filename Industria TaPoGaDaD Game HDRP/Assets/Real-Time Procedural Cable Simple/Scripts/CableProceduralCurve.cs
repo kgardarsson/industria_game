@@ -90,10 +90,10 @@ public class CableProceduralCurve : MonoBehaviour
 
 	public void turnGreen() {
     rend = GetComponent<Renderer>();
-    rend.material.color = Color.green;
+		rend.material.SetColor("_BaseColor", Color.green);
 	}
 	public void turnBlack() {
     rend = GetComponent<Renderer>();
-    rend.material.color = Color.black;
+		rend.material.SetColor("_BaseColor", Color.black);
 	}
 }
