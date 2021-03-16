@@ -32,11 +32,9 @@ public class EnergyContainer : MonoBehaviour
     public UnityEvent On;
     public UnityEvent Off;
 
-    private AudioSource sfx;
-
-    void Start()
-    {
-        sfx = GetComponent<AudioSource>();
+    private AudioClip sfx;
+    private AudioClip sfxNegative;
+    void Start() {
         rend = GetComponent<Renderer>();
 
         SetColor();
@@ -53,14 +51,16 @@ public class EnergyContainer : MonoBehaviour
 
     private void Awake()
     {
+        sfx = (AudioClip)Resources.Load("Audio/SFX/Button", typeof(AudioClip));
+        sfxNegative = (AudioClip)Resources.Load("Audio/SFX/Button Negative", typeof(AudioClip));
         //StartStates();
     }
 
     public void interact()
     {
         EnergyManager em = FindObjectOfType<EnergyManager>();
-        if (on)
-        {
+        if (on) {
+            // If button is on
             em.energy += this.energyItTakes;
             on = false;
             if (!_locked)
@@ -68,11 +68,11 @@ public class EnergyContainer : MonoBehaviour
                 Off.Invoke();
                 eam.MoveToTotal();
             }
-        }
-        else
-        {
-            if (em.energy >= this.energyItTakes)
-            {
+            AudioSource.PlayClipAtPoint(sfx, transform.position);
+
+        } else {
+            if (em.energy >= this.energyItTakes) {
+                // If button is off and player has enough energy
                 em.energy -= this.energyItTakes;
                 on = true;
                 if (!_locked)
@@ -80,11 +80,15 @@ public class EnergyContainer : MonoBehaviour
                     On.Invoke();
                     eam.MoveToCenter();
                 }
+                AudioSource.PlayClipAtPoint(sfx, transform.position);
+
+            } else {
+                // If button is off and player DOES NOT have enough energy
+                AudioSource.PlayClipAtPoint(sfxNegative, transform.position, .3f);
             }
         }
         SetColor();
         FindObjectOfType<EnergyMeter>().updateEnergyMeter();
-        sfx.PlayOneShot(sfx.clip);
     }
     public void StartStates()
     {
