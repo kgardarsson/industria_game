@@ -49414,6 +49414,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7457969803587988578, guid: 164ee0ae190e21045af1818074290b29,
         type: 3}
+      propertyPath: mouseSensitivity
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 7457969803587988578, guid: 164ee0ae190e21045af1818074290b29,
+        type: 3}
       propertyPath: interactLayer.m_Bits
       value: 768
       objectReference: {fileID: 0}
