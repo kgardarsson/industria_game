@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: b687f5eacbcbb96408f1f8914323c4e8
+guid: 885a95e99a768b24a95eb1e5fa3db38f
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable: []
@@ -7,15 +7,25 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: _metalWhiteboard
-    second: {fileID: 2100000, guid: 9b34d181fa8c07c499d9fc3dd65318aa, type: 2}
+      name: _Glass
+    second: {fileID: 2100000, guid: 028c74ccad1daf7468007b99dd7b3013, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: lambert1
-    second: {fileID: 2100000, guid: 7abd490a09124874590b290c369f8601, type: 2}
+      name: _Plastic
+    second: {fileID: 2100000, guid: 501522ce7db927c48ac3d9c55df1e14f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _Plastic_2
+    second: {fileID: 2100000, guid: 5bb85172d94a8324e8de9e104a4a457c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _Pole
+    second: {fileID: 2100000, guid: 9b34d181fa8c07c499d9fc3dd65318aa, type: 2}
   materials:
-    materialImportMode: 1
+    materialImportMode: 2
     materialName: 0
     materialSearch: 1
     materialLocation: 1
