@@ -30178,6 +30178,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1470754988}
     m_Modifications:
+    - target: {fileID: 837907300709097813, guid: c9178d5c67862bf46b8cabf3995b9f08,
+        type: 3}
+      propertyPath: m_Range
+      value: 1.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 837907300709097813, guid: c9178d5c67862bf46b8cabf3995b9f08,
+        type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1506815924505620169, guid: c9178d5c67862bf46b8cabf3995b9f08,
         type: 3}
       propertyPath: on
