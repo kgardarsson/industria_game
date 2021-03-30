@@ -78,6 +78,7 @@ public class CodeLock : MonoBehaviour
     public void resetCode()
     {
         attemptedCode = "";
+        placeInCode = 0;
         text.SetText(defaultText);
         text.faceColor = Color.black;
     }

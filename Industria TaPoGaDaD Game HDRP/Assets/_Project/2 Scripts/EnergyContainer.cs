@@ -67,10 +67,10 @@ public class EnergyContainer : MonoBehaviour
             // If button is on
             em.energy += this.energyItTakes;
             on = false;
+            eam.MoveToTotal();
             if (!_locked)
             {
                 Off.Invoke();
-                eam.MoveToTotal();
             }
             AudioSource.PlayClipAtPoint(sfx, transform.position);
 
@@ -82,10 +82,10 @@ public class EnergyContainer : MonoBehaviour
                 // If button is off and player has enough energy
                 em.energy -= this.energyItTakes;
                 on = true;
+                eam.MoveToCenter();
                 if (!_locked)
                 {
                     On.Invoke();
-                    eam.MoveToCenter();
                 }
                 AudioSource.PlayClipAtPoint(sfx, transform.position);
 
@@ -122,9 +122,12 @@ public class EnergyContainer : MonoBehaviour
             {
                 if (on)
                 {
-                    if(!_locked) {
+                    if (!_locked)
+                    {
                         light.color = Color.green;
-                    } else {
+                    }
+                    else
+                    {
                         light.color = Color.yellow;
                     }
                 }
