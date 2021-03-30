@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 112000000, guid: 8a1be19767ebb094585bdd419c8f0f18,
+  m_LightingDataAsset: {fileID: 112000000, guid: 24329b77a9bf20143b26709b32897d2c,
     type: 2}
   m_UseShadowmask: 0
 --- !u!196 &4
@@ -15158,16 +15158,6 @@ PrefabInstance:
       propertyPath: mSpeed
       value: 7
       objectReference: {fileID: 0}
-    - target: {fileID: 7457969803587988572, guid: 164ee0ae190e21045af1818074290b29,
-        type: 3}
-      propertyPath: m_HDR
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7457969803587988572, guid: 164ee0ae190e21045af1818074290b29,
-        type: 3}
-      propertyPath: m_AllowMSAA
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7457969803587988576, guid: 164ee0ae190e21045af1818074290b29,
         type: 3}
       propertyPath: m_Layer
@@ -15182,6 +15172,21 @@ PrefabInstance:
         type: 3}
       propertyPath: interactLayer.m_Bits
       value: 768
+      objectReference: {fileID: 0}
+    - target: {fileID: 7776705991107441592, guid: 164ee0ae190e21045af1818074290b29,
+        type: 3}
+      propertyPath: physicalParameters.m_Iso
+      value: 1600
+      objectReference: {fileID: 0}
+    - target: {fileID: 7776705991107441592, guid: 164ee0ae190e21045af1818074290b29,
+        type: 3}
+      propertyPath: physicalParameters.m_Aperture
+      value: 2.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7776705991107441592, guid: 164ee0ae190e21045af1818074290b29,
+        type: 3}
+      propertyPath: physicalParameters.m_ShutterSpeed
+      value: 0.02
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 164ee0ae190e21045af1818074290b29, type: 3}
