@@ -113,7 +113,7 @@ public class EnergyContainer : MonoBehaviour
 
 
 
-    private void SetColor()
+    public void SetColor()
     {
         try
         {
@@ -122,7 +122,11 @@ public class EnergyContainer : MonoBehaviour
             {
                 if (on)
                 {
-                    light.color = Color.green;
+                    if(!_locked) {
+                        light.color = Color.green;
+                    } else {
+                        light.color = Color.yellow;
+                    }
                 }
                 else
                 {
