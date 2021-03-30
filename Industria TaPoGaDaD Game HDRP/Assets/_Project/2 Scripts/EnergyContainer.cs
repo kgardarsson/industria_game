@@ -104,10 +104,12 @@ public class EnergyContainer : MonoBehaviour
 
 
     private void SetColor() {
-        if (on) {
-            transform.GetChild(0).GetComponent<Light>().color = Color.green;
-        } else {
-            transform.GetChild(0).GetComponent<Light>().color = Color.red;
+        if (transform.GetChild(0).TryGetComponent<Light>(out Light light)) {
+            if (on) {
+                light.color = Color.green;
+            } else {
+                light.color = Color.red;
+            }
         }
     }
 
