@@ -103,15 +103,11 @@ public class EnergyContainer : MonoBehaviour
     }
 
 
-    private void SetColor()
-    {
-        if (on)
-        {
-            rend.material.SetColor("_BaseColor", Color.green);
-        }
-        else
-        {
-            rend.material.SetColor("_BaseColor", Color.red);
+    private void SetColor() {
+        if (on) {
+            transform.GetChild(0).GetComponent<Light>().color = Color.green;
+        } else {
+            transform.GetChild(0).GetComponent<Light>().color = Color.red;
         }
     }
 
