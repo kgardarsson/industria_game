@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using System;
 
 public class EnergyContainer : MonoBehaviour
 {
 
     public uint energyItTakes;
+    [SerializeField]
     private EnergyAnimationManager eam;
     public bool on;
     [SerializeField]
@@ -34,16 +36,17 @@ public class EnergyContainer : MonoBehaviour
 
     private AudioClip sfx;
     private AudioClip sfxNegative;
-    void Start() {
+    void Start()
+    {
         rend = GetComponent<Renderer>();
 
         SetColor();
 
         StartStates();
 
-        eam = GameObject.FindObjectOfType<EnergyAnimationManager>();
-    }
 
+        eam = GameObject.Find("EnergyAnimationManager").GetComponent<EnergyAnimationManager>();
+    }
     void Update()
     {
 
@@ -59,7 +62,8 @@ public class EnergyContainer : MonoBehaviour
     public void interact()
     {
         EnergyManager em = FindObjectOfType<EnergyManager>();
-        if (on) {
+        if (on)
+        {
             // If button is on
             em.energy += this.energyItTakes;
             on = false;
@@ -70,8 +74,11 @@ public class EnergyContainer : MonoBehaviour
             }
             AudioSource.PlayClipAtPoint(sfx, transform.position);
 
-        } else {
-            if (em.energy >= this.energyItTakes) {
+        }
+        else
+        {
+            if (em.energy >= this.energyItTakes)
+            {
                 // If button is off and player has enough energy
                 em.energy -= this.energyItTakes;
                 on = true;
@@ -82,7 +89,9 @@ public class EnergyContainer : MonoBehaviour
                 }
                 AudioSource.PlayClipAtPoint(sfx, transform.position);
 
-            } else {
+            }
+            else
+            {
                 // If button is off and player DOES NOT have enough energy
                 AudioSource.PlayClipAtPoint(sfxNegative, transform.position, .3f);
             }
@@ -103,14 +112,29 @@ public class EnergyContainer : MonoBehaviour
     }
 
 
-    private void SetColor() {
-        if (transform.GetChild(0).TryGetComponent<Light>(out Light light)) {
-            if (on) {
-                light.color = Color.green;
-            } else {
-                light.color = Color.red;
+
+    private void SetColor()
+    {
+        try
+        {
+
+            if (transform.GetChild(0).TryGetComponent<Light>(out Light light))
+            {
+                if (on)
+                {
+                    light.color = Color.green;
+                }
+                else
+                {
+                    light.color = Color.red;
+                }
             }
         }
+        catch (UnityException)
+        {
+
+        }
+
     }
 
 }
