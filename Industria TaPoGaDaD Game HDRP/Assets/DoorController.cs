@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class DoorController : MonoBehaviour
 {
+    public bool initialOpenState = false;
+
     private Animator animator;
     // Start is called before the first frame update
     private AudioSource sfx;
@@ -16,6 +18,7 @@ public class DoorController : MonoBehaviour
 
     void Start()
     {
+        Open(initialOpenState);
     }
 
     public void Open(bool open)
