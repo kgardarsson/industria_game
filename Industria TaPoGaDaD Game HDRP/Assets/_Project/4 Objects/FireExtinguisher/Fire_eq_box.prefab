@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3640478027510672622}
   - component: {fileID: 1540622720703895588}
   m_Layer: 0
-  m_Name: fire_eq.FBX
+  m_Name: Fire_eq_box
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -58,7 +58,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -2291068612735988161, guid: ea16bcbb547d94fa1bffce29433b966a, type: 3}
+  - {fileID: 2100000, guid: b5853a3b9e30a40cd83f48dca3e8bec2, type: 2}
   - {fileID: 1191386345089510852, guid: ea16bcbb547d94fa1bffce29433b966a, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
