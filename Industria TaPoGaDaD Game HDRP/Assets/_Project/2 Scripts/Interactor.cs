@@ -48,11 +48,6 @@ public class Interactor : MonoBehaviour
                     Instantiate(TypeMessage);
                 }
             }
-            else
-            {
-                energyItTakes = 0;
-                inRangeOfButton = false;
-            }
             
             // if (hit.collider.gameObject.tag == "Computer")
             // {
