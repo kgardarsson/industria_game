@@ -52,20 +52,20 @@ public class Interactor : MonoBehaviour
                 //         hit.transform.gameObject.GetComponent<CodeInput>().PressCode();
                 //     }
                 // }
+                if (hit.collider.gameObject.tag == "Keyboard")
+                {
+                    if (Input.GetMouseButtonDown(0))
+                    {
+
+                        Instantiate(TypeMessage);
+                    }
+                }
             }
             else
             {
                 inRangeOfButton = false;
                 // Debug.Log("Did not Hit");
 
-            }
-            if (hit.collider.gameObject.tag == "Keyboard")
-            {
-                if (Input.GetMouseButtonDown(0))
-                {
-
-                    Instantiate(TypeMessage);
-                }
             }
 
             // if (hit.collider.gameObject.tag == "Computer")
