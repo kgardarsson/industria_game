@@ -19,6 +19,7 @@ public class CodeLock : MonoBehaviour
 
     public UnityEvent LockDoor;
     [SerializeField] private TextMeshProUGUI text;
+    public bool solved = false;
 
     private void Awake()
     {
@@ -39,6 +40,7 @@ public class CodeLock : MonoBehaviour
             text.faceColor = new Color(0, 0.7f, 0, 1);
             // AudioSource sfx = GetComponent<AudioSource>();
             // sfx.PlayOneShot(sfx.clip);
+            solved = true;
         }
         else
         {
@@ -81,5 +83,6 @@ public class CodeLock : MonoBehaviour
         placeInCode = 0;
         text.SetText(defaultText);
         text.faceColor = Color.black;
+        solved = false;
     }
 }

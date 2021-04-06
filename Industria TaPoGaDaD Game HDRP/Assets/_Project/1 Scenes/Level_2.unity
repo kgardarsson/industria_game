@@ -2987,7 +2987,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 1073511614}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1846760098}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1f6896912ec53b64ea31a888a835e377, type: 3}
@@ -3366,6 +3366,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9b00776d329844004bb8b60be5226b40, type: 3}
+--- !u!114 &425584898 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2604760253642300453, guid: d6f9e6957a55f438384f19a3812eea74,
+    type: 3}
+  m_PrefabInstance: {fileID: 1073511614}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!33 &428404098
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -10916,7 +10928,7 @@ PrefabInstance:
     - target: {fileID: 1674236561360458150, guid: d6f9e6957a55f438384f19a3812eea74,
         type: 3}
       propertyPath: LockDoor.m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1674236561360458150, guid: d6f9e6957a55f438384f19a3812eea74,
         type: 3}
@@ -10930,6 +10942,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1674236561360458150, guid: d6f9e6957a55f438384f19a3812eea74,
         type: 3}
+      propertyPath: LockDoor.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1674236561360458150, guid: d6f9e6957a55f438384f19a3812eea74,
+        type: 3}
       propertyPath: LockDoor.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1216170991}
@@ -10940,12 +10957,22 @@ PrefabInstance:
       objectReference: {fileID: 1216170991}
     - target: {fileID: 1674236561360458150, guid: d6f9e6957a55f438384f19a3812eea74,
         type: 3}
+      propertyPath: LockDoor.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 425584898}
+    - target: {fileID: 1674236561360458150, guid: d6f9e6957a55f438384f19a3812eea74,
+        type: 3}
       propertyPath: LockDoor.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1674236561360458150, guid: d6f9e6957a55f438384f19a3812eea74,
         type: 3}
       propertyPath: LockDoor.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1674236561360458150, guid: d6f9e6957a55f438384f19a3812eea74,
+        type: 3}
+      propertyPath: LockDoor.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1674236561360458150, guid: d6f9e6957a55f438384f19a3812eea74,
@@ -10960,6 +10987,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1674236561360458150, guid: d6f9e6957a55f438384f19a3812eea74,
         type: 3}
+      propertyPath: LockDoor.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: set_text
+      objectReference: {fileID: 0}
+    - target: {fileID: 1674236561360458150, guid: d6f9e6957a55f438384f19a3812eea74,
+        type: 3}
       propertyPath: LockDoor.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
       value: 1
       objectReference: {fileID: 0}
@@ -10970,12 +11002,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1674236561360458150, guid: d6f9e6957a55f438384f19a3812eea74,
         type: 3}
+      propertyPath: LockDoor.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1674236561360458150, guid: d6f9e6957a55f438384f19a3812eea74,
+        type: 3}
+      propertyPath: LockDoor.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_StringArgument
+      value: Door A locked in place. Turn off to unlock.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1674236561360458150, guid: d6f9e6957a55f438384f19a3812eea74,
+        type: 3}
       propertyPath: LockDoor.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 1674236561360458150, guid: d6f9e6957a55f438384f19a3812eea74,
         type: 3}
       propertyPath: LockDoor.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1674236561360458150, guid: d6f9e6957a55f438384f19a3812eea74,
+        type: 3}
+      propertyPath: LockDoor.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 1765729213987197484, guid: d6f9e6957a55f438384f19a3812eea74,
@@ -10996,7 +11043,7 @@ PrefabInstance:
     - target: {fileID: 2048617225044042237, guid: d6f9e6957a55f438384f19a3812eea74,
         type: 3}
       propertyPath: Off.m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2048617225044042237, guid: d6f9e6957a55f438384f19a3812eea74,
         type: 3}
@@ -11006,6 +11053,26 @@ PrefabInstance:
     - target: {fileID: 2048617225044042237, guid: d6f9e6957a55f438384f19a3812eea74,
         type: 3}
       propertyPath: On.m_PersistentCalls.m_Calls.Array.data[4].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2048617225044042237, guid: d6f9e6957a55f438384f19a3812eea74,
+        type: 3}
+      propertyPath: Off.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2048617225044042237, guid: d6f9e6957a55f438384f19a3812eea74,
+        type: 3}
+      propertyPath: Off.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2048617225044042237, guid: d6f9e6957a55f438384f19a3812eea74,
+        type: 3}
+      propertyPath: Off.m_PersistentCalls.m_Calls.Array.data[4].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2048617225044042237, guid: d6f9e6957a55f438384f19a3812eea74,
+        type: 3}
+      propertyPath: Off.m_PersistentCalls.m_Calls.Array.data[5].m_Mode
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2048617225044042237, guid: d6f9e6957a55f438384f19a3812eea74,
@@ -11025,7 +11092,42 @@ PrefabInstance:
       objectReference: {fileID: 1216170991}
     - target: {fileID: 2048617225044042237, guid: d6f9e6957a55f438384f19a3812eea74,
         type: 3}
+      propertyPath: Off.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 425584898}
+    - target: {fileID: 2048617225044042237, guid: d6f9e6957a55f438384f19a3812eea74,
+        type: 3}
+      propertyPath: Off.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 1846760098}
+    - target: {fileID: 2048617225044042237, guid: d6f9e6957a55f438384f19a3812eea74,
+        type: 3}
+      propertyPath: Off.m_PersistentCalls.m_Calls.Array.data[4].m_Target
+      value: 
+      objectReference: {fileID: 1216170991}
+    - target: {fileID: 2048617225044042237, guid: d6f9e6957a55f438384f19a3812eea74,
+        type: 3}
+      propertyPath: Off.m_PersistentCalls.m_Calls.Array.data[5].m_Target
+      value: 
+      objectReference: {fileID: 1216170991}
+    - target: {fileID: 2048617225044042237, guid: d6f9e6957a55f438384f19a3812eea74,
+        type: 3}
       propertyPath: On.m_PersistentCalls.m_Calls.Array.data[4].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2048617225044042237, guid: d6f9e6957a55f438384f19a3812eea74,
+        type: 3}
+      propertyPath: Off.m_PersistentCalls.m_Calls.Array.data[3].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2048617225044042237, guid: d6f9e6957a55f438384f19a3812eea74,
+        type: 3}
+      propertyPath: Off.m_PersistentCalls.m_Calls.Array.data[4].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2048617225044042237, guid: d6f9e6957a55f438384f19a3812eea74,
+        type: 3}
+      propertyPath: Off.m_PersistentCalls.m_Calls.Array.data[5].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2048617225044042237, guid: d6f9e6957a55f438384f19a3812eea74,
@@ -11045,8 +11147,28 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2048617225044042237, guid: d6f9e6957a55f438384f19a3812eea74,
         type: 3}
+      propertyPath: Off.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: set_text
+      objectReference: {fileID: 0}
+    - target: {fileID: 2048617225044042237, guid: d6f9e6957a55f438384f19a3812eea74,
+        type: 3}
+      propertyPath: Off.m_PersistentCalls.m_Calls.Array.data[4].m_MethodName
+      value: set_Locked
+      objectReference: {fileID: 0}
+    - target: {fileID: 2048617225044042237, guid: d6f9e6957a55f438384f19a3812eea74,
+        type: 3}
+      propertyPath: Off.m_PersistentCalls.m_Calls.Array.data[5].m_MethodName
+      value: SetColor
+      objectReference: {fileID: 0}
+    - target: {fileID: 2048617225044042237, guid: d6f9e6957a55f438384f19a3812eea74,
+        type: 3}
       propertyPath: On.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_BoolArgument
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2048617225044042237, guid: d6f9e6957a55f438384f19a3812eea74,
+        type: 3}
+      propertyPath: Off.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_StringArgument
+      value: Type code to lock door in position
       objectReference: {fileID: 0}
     - target: {fileID: 2048617225044042237, guid: d6f9e6957a55f438384f19a3812eea74,
         type: 3}
@@ -11056,6 +11178,21 @@ PrefabInstance:
     - target: {fileID: 2048617225044042237, guid: d6f9e6957a55f438384f19a3812eea74,
         type: 3}
       propertyPath: On.m_PersistentCalls.m_Calls.Array.data[4].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 2048617225044042237, guid: d6f9e6957a55f438384f19a3812eea74,
+        type: 3}
+      propertyPath: Off.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 2048617225044042237, guid: d6f9e6957a55f438384f19a3812eea74,
+        type: 3}
+      propertyPath: Off.m_PersistentCalls.m_Calls.Array.data[4].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 2048617225044042237, guid: d6f9e6957a55f438384f19a3812eea74,
+        type: 3}
+      propertyPath: Off.m_PersistentCalls.m_Calls.Array.data[5].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 2604760253642300453, guid: d6f9e6957a55f438384f19a3812eea74,
@@ -20931,6 +21068,12 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1847591222}
   m_Mesh: {fileID: 4300000, guid: 76e15ece664ee41ada45b8500a673f22, type: 3}
+--- !u!1 &1846760098 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8909739070656630969, guid: d6f9e6957a55f438384f19a3812eea74,
+    type: 3}
+  m_PrefabInstance: {fileID: 1073511614}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1847591222
 GameObject:
   m_ObjectHideFlags: 0

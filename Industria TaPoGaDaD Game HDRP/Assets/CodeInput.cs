@@ -27,7 +27,7 @@ public class CodeInput : MonoBehaviour
 
     private void Update()
     {
-        if (inputReady)
+        if (inputReady && CodeLock.solved == false)
         {
             int number;
             if (int.TryParse(Input.inputString, out number))
