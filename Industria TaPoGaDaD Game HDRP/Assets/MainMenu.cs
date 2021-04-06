@@ -3,11 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class ChangeLevel : MonoBehaviour
+public class MainMenu : MonoBehaviour
 {
-
-    private void OnTriggerEnter(Collider other)
+    public void Play()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
+    public void Quit()
+    {
+        Debug.Log("QUIT!");
+        Application.Quit();
     }
 }

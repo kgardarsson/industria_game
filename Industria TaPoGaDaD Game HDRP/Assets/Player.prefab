@@ -222,7 +222,7 @@ GameObject:
   - component: {fileID: 7801688031272487548}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -465,6 +465,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mouseSensitivity: 60
   Player: {fileID: 7457969802924927664}
+  menu: {fileID: 0}
 --- !u!114 &5678433982937950010
 MonoBehaviour:
   m_ObjectHideFlags: 0
