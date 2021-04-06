@@ -18,7 +18,9 @@ public class CodeLock : MonoBehaviour
     public string attemptedCode;
 
     public UnityEvent LockDoor;
+    public UnityEvent UnlockDoor;
     [SerializeField] private TextMeshProUGUI text;
+    [HideInInspector] public bool solved = false;
 
     private void Awake()
     {
@@ -39,6 +41,7 @@ public class CodeLock : MonoBehaviour
             text.faceColor = new Color(0, 0.7f, 0, 1);
             // AudioSource sfx = GetComponent<AudioSource>();
             // sfx.PlayOneShot(sfx.clip);
+            solved = true;
         }
         else
         {
@@ -77,9 +80,11 @@ public class CodeLock : MonoBehaviour
 
     public void resetCode()
     {
+        UnlockDoor.Invoke();
         attemptedCode = "";
         placeInCode = 0;
         text.SetText(defaultText);
         text.faceColor = Color.black;
+        solved = false;
     }
 }
