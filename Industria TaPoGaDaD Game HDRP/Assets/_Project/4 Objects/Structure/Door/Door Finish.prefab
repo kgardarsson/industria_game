@@ -58,59 +58,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 0}
---- !u!1 &8927494454239056420
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 5989873204798303225}
-  - component: {fileID: 8087498760917109783}
-  m_Layer: 0
-  m_Name: DecalNR (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &5989873204798303225
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8927494454239056420}
-  m_LocalRotation: {x: 0, y: -0.70710677, z: -0.70710677, w: 0}
-  m_LocalPosition: {x: -1.215, y: -0.729, z: 1.825}
-  m_LocalScale: {x: 0.4544522, y: 0.4414275, z: 0.5120566}
-  m_Children: []
-  m_Father: {fileID: 5892450932839401746}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 270, y: 90, z: 90}
---- !u!114 &8087498760917109783
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8927494454239056420}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f19d9143a39eb3b46bc4563e9889cfbd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Version: 2
-  m_Material: {fileID: 2100000, guid: 703887fd7ad3da94f978dd865a00c7d2, type: 2}
-  m_DrawDistance: 10000
-  m_FadeScale: 1
-  m_UVScale: {x: 1, y: 1}
-  m_UVBias: {x: 0, y: 0}
-  m_AffectsTransparency: 0
-  m_Offset: {x: 0, y: 0, z: 0.05}
-  m_Size: {x: 3, y: 3, z: 0.1}
-  m_FadeFactor: 1
 --- !u!1001 &6242857178138973733
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -118,6 +65,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2338563555396484704, guid: b806f77e4847a408bae6715f2905e8c3,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4950656004532233396, guid: b806f77e4847a408bae6715f2905e8c3,
         type: 3}
       propertyPath: AutomaticCloseCollider
@@ -203,12 +155,6 @@ PrefabInstance:
 --- !u!4 &4255037617682178718 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7903812588514211003, guid: b806f77e4847a408bae6715f2905e8c3,
-    type: 3}
-  m_PrefabInstance: {fileID: 6242857178138973733}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &5892450932839401746 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 532873226808155959, guid: b806f77e4847a408bae6715f2905e8c3,
     type: 3}
   m_PrefabInstance: {fileID: 6242857178138973733}
   m_PrefabAsset: {fileID: 0}
