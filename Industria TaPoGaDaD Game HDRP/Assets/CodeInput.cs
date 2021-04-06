@@ -27,6 +27,9 @@ public class CodeInput : MonoBehaviour
 
     private void Update()
     {
+        if (Input.GetKeyDown(KeyCode.E)) {
+            CodeLock.resetCode();
+        }
         if (inputReady && CodeLock.solved == false)
         {
             int number;

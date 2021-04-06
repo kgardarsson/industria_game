@@ -18,8 +18,9 @@ public class CodeLock : MonoBehaviour
     public string attemptedCode;
 
     public UnityEvent LockDoor;
+    public UnityEvent UnlockDoor;
     [SerializeField] private TextMeshProUGUI text;
-    public bool solved = false;
+    [HideInInspector] public bool solved = false;
 
     private void Awake()
     {
@@ -79,6 +80,7 @@ public class CodeLock : MonoBehaviour
 
     public void resetCode()
     {
+        UnlockDoor.Invoke();
         attemptedCode = "";
         placeInCode = 0;
         text.SetText(defaultText);
