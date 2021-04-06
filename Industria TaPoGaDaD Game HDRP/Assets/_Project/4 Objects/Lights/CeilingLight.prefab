@@ -113,7 +113,7 @@ MonoBehaviour:
   m_PointlightHDType: 0
   m_SpotLightShape: 0
   m_AreaLightShape: 0
-  m_Intensity: 800
+  m_Intensity: 1800
   m_EnableSpotReflector: 0
   m_LuxAtDistance: 1
   m_InnerSpotPercent: 0
@@ -127,7 +127,7 @@ MonoBehaviour:
   m_ShapeWidth: 0.8471592
   m_ShapeHeight: 0.86415213
   m_AspectRatio: 1
-  m_ShapeRadius: 0.8
+  m_ShapeRadius: 0.7
   m_SoftnessScale: 1
   m_UseCustomSpotLightShadowCone: 0
   m_CustomSpotLightShadowCone: 30
