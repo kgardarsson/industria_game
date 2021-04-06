@@ -33,11 +33,14 @@ public class CodeInput : MonoBehaviour
         if (inputReady && CodeLock.solved == false)
         {
             int number;
-            if (int.TryParse(Input.inputString, out number))
-            {
-                Debug.Log("Pressed key: " + number);
-                CodeLock.SetValue(number.ToString());
-                AudioSource.PlayClipAtPoint(sfx[number], transform.position);
+            if (Input.inputString != "") {
+                if (int.TryParse(Input.inputString.Substring(0,1), out number))
+                {
+                    // number = number
+                    Debug.Log("Pressed key: " + number);
+                    CodeLock.SetValue(number.ToString());
+                    AudioSource.PlayClipAtPoint(sfx[number], transform.position);
+                }
             }
 
             // foreach (KeyCode kcode in Enum.GetValues(typeof(KeyCode)))
