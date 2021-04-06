@@ -133,7 +133,15 @@ public class EnergyContainer : MonoBehaviour
                 }
                 else
                 {
-                    light.color = Color.red;
+                    if (!_locked)
+                    {
+                        // light.color = Color.green;
+                        light.color = Color.red;
+                    }
+                    else
+                    {
+                        light.color = Color.yellow*.5f;
+                    }
                 }
             }
         }
