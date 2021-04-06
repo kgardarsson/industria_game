@@ -9,7 +9,7 @@ public class Interactor : MonoBehaviour
     public uint energyItTakes;
     public bool inRangeOfButton = false;
 
-    private GameObject TypeMessage;
+    [SerializeField] private GameObject TypeMessage;
 
     // Start is called before the first frame update
     void Start()
@@ -45,8 +45,7 @@ public class Interactor : MonoBehaviour
             if (hit.collider.gameObject.tag == "Keyboard") {
                 if (Input.GetMouseButtonDown(0)) {
 
-                    // Show message!
-                    Debug.Log("Popup message");
+                    Instantiate(TypeMessage);
                 }
             }
             else
