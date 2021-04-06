@@ -9,7 +9,7 @@
         "HideSendToUnityMenu": true,
         "BakeAnimation": false,
         "showConvertToPrefabDialog": true,
-        "integrationSavePath": "D:\\Cloud\\Git_Projects\\industria_game\\Industria TaPoGaDaD Game HDRP",
+        "integrationSavePath": "C:/Program Files/Autodesk/Maya2022",
         "selectedDCCApp": 1,
         "prefabSavePaths": [
             "."
@@ -20,12 +20,12 @@
         "selectedFbxPath": 0,
         "selectedPrefabPath": 0,
         "dccOptionNames": [
-            "3ds Max 2021",
-            "Maya 2020"
+            "Maya 2020",
+            "Maya 2022"
         ],
         "dccOptionPaths": [
-            "C:/Program Files/Autodesk/3ds Max 2021/3dsmax.exe",
-            "C:/Program Files/Autodesk/Maya2020/bin/maya.exe"
+            "C:/Program Files/Autodesk/Maya2020/bin/maya.exe",
+            "C:/Program Files/Autodesk/Maya2022/bin/maya.exe"
         ],
         "exportModelSettingsSerialize": {
             "exportFormat": 0,
