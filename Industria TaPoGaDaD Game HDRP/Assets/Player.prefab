@@ -220,7 +220,6 @@ GameObject:
   - component: {fileID: 7457969802924927675}
   - component: {fileID: 8892066314449385302}
   - component: {fileID: 7801688031272487548}
-  - component: {fileID: 7457969803075721278}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -333,6 +332,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mSpeed: 7
+  isOn: 0
+  failSafe: 0
 --- !u!114 &8892066314449385302
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -361,19 +362,6 @@ MonoBehaviour:
   isOn: 0
   lightSource: {fileID: 3561767753573896567}
   failSafe: 0
---- !u!114 &7457969803075721278
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7457969802924927674}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f3b758b64cd14e7d871e32bcc6d208e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  energy: 0
 --- !u!1 &7457969803587988576
 GameObject:
   m_ObjectHideFlags: 0
