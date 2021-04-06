@@ -8,14 +8,13 @@ public class Movement : MonoBehaviour
     public float mSpeed = 5f;
     public bool isOn = false;
     public bool failSafe =false;
-
+    // public Rigidbody rb;
 
     // Start is called before the first frame update
 
     void Start()
     {
-
-
+       
     }
 
     // Update is called once per frame
@@ -24,6 +23,15 @@ public class Movement : MonoBehaviour
     {
 
         transform.Translate(mSpeed * Input.GetAxis("Horizontal") * Time.deltaTime, 0f, mSpeed * Input.GetAxis("Vertical") * Time.deltaTime);
+        
+        //  if(rb.velocity.magnitude > 0){
+        //     GetComponent<AudioSource>().Play();
+        //         StartCoroutine(FailSafe(0.1f));
+        //  }
+
+    
+
+        
 
        if (Input.GetButtonDown("Run"))
         {
@@ -31,7 +39,9 @@ public class Movement : MonoBehaviour
                 failSafe = true;
                 mSpeed = 10;
                 isOn=true;
-                StartCoroutine(FailSafe());
+                StartCoroutine(FailSafe(0.25f));
+
+
             }
 
             if (isOn==true && failSafe ==false)
@@ -40,16 +50,17 @@ public class Movement : MonoBehaviour
                 mSpeed = 5;
 
                 isOn=false;  
-                StartCoroutine(FailSafe());
+                StartCoroutine(FailSafe(0.25f));
 
             }
 
         }
 
+
     }
 
-    IEnumerator FailSafe( ){
-        yield return new WaitForSeconds(0.25f);
+    IEnumerator FailSafe(float waitTime){
+        yield return new WaitForSeconds(waitTime);
         failSafe =false;
     }
 
