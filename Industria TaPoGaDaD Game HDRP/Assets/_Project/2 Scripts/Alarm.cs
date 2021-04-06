@@ -13,6 +13,7 @@ public class Alarm : MonoBehaviour
     void Start()
     {
             playaudio = GetComponent<AudioSource>();
+            playaudio.volume=0.5f;
 
     }
 
@@ -20,6 +21,7 @@ public class Alarm : MonoBehaviour
     void OnMouseDown() {
         if (playing == false)
         {
+        playaudio.volume=0.5f;
         playaudio.Play();
         playing = true; 
         failSafe = true;
