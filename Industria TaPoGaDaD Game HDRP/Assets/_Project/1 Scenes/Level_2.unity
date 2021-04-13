@@ -13320,6 +13320,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Computer Desk
       objectReference: {fileID: 0}
+    - target: {fileID: 4543407478975630643, guid: d6f9e6957a55f438384f19a3812eea74,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.1995771
+      objectReference: {fileID: 0}
+    - target: {fileID: 4543407478975630643, guid: d6f9e6957a55f438384f19a3812eea74,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.1995771
+      objectReference: {fileID: 0}
+    - target: {fileID: 4543407478975630643, guid: d6f9e6957a55f438384f19a3812eea74,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.1995771
+      objectReference: {fileID: 0}
+    - target: {fileID: 4543407478975630643, guid: d6f9e6957a55f438384f19a3812eea74,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.09
+      objectReference: {fileID: 0}
     - target: {fileID: 5331614589918120485, guid: d6f9e6957a55f438384f19a3812eea74,
         type: 3}
       propertyPath: m_LocalPosition.z
@@ -13338,7 +13358,7 @@ PrefabInstance:
     - target: {fileID: 5737690656804711857, guid: d6f9e6957a55f438384f19a3812eea74,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -15.976027
+      value: -15.934
       objectReference: {fileID: 0}
     - target: {fileID: 5737690656804711857, guid: d6f9e6957a55f438384f19a3812eea74,
         type: 3}
@@ -13385,6 +13405,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7031457755737167718, guid: d6f9e6957a55f438384f19a3812eea74,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.673
+      objectReference: {fileID: 0}
     - target: {fileID: 7825471224521295079, guid: d6f9e6957a55f438384f19a3812eea74,
         type: 3}
       propertyPath: defaultText
@@ -13426,6 +13451,11 @@ PrefabInstance:
         type: 3}
       propertyPath: LockDoor.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8501113698068454806, guid: d6f9e6957a55f438384f19a3812eea74,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.675
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d6f9e6957a55f438384f19a3812eea74, type: 3}
