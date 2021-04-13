@@ -7,6 +7,8 @@ public class Alarm : MonoBehaviour
     public AudioSource playaudio;  
     public Animator m_Animator;
     public Light myLight;
+    public Light myLightEntrance;
+
     public bool playing = true;
     public bool failSafe = false;
 
@@ -23,6 +25,7 @@ public class Alarm : MonoBehaviour
     void OnMouseDown() {
         if (playing == false)
         {
+        myLightEntrance.enabled = true;
         myLight.enabled = true;
         playaudio.volume=0.5f;
         playaudio.Play();
@@ -35,6 +38,7 @@ public class Alarm : MonoBehaviour
 
         else if (playing == true)
         {
+        myLightEntrance.enabled = false;
         myLight.enabled = false;
         failSafe =true; 
         playaudio.Stop();
