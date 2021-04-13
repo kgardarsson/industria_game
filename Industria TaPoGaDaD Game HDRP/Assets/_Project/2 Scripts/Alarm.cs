@@ -5,13 +5,15 @@ using UnityEngine;
 public class Alarm : MonoBehaviour
 {
     public AudioSource playaudio;  
- 
+    public Animator m_Animator;
+    public Light myLight;
     public bool playing = true;
     public bool failSafe = false;
 
     // Start is called before the first frame update
     void Start()
     {
+            //m_Animator = gameObject.GetComponent<Animator>();
             playaudio = GetComponent<AudioSource>();
             playaudio.volume=0.5f;
 
@@ -21,6 +23,7 @@ public class Alarm : MonoBehaviour
     void OnMouseDown() {
         if (playing == false)
         {
+        myLight.enabled = true;
         playaudio.volume=0.5f;
         playaudio.Play();
         playing = true; 
@@ -32,7 +35,7 @@ public class Alarm : MonoBehaviour
 
         else if (playing == true)
         {
-
+        myLight.enabled = false;
         failSafe =true; 
         playaudio.Stop();
         playing = false;
