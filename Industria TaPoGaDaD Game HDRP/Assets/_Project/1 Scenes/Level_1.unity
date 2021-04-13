@@ -8661,18 +8661,33 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 786451788461918865, guid: 3cc9646b8660d314696bb4331a1d9a9f,
         type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.218947
+      objectReference: {fileID: 0}
+    - target: {fileID: 786451788461918865, guid: 3cc9646b8660d314696bb4331a1d9a9f,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.218947
+      objectReference: {fileID: 0}
+    - target: {fileID: 786451788461918865, guid: 3cc9646b8660d314696bb4331a1d9a9f,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.218947
+      objectReference: {fileID: 0}
+    - target: {fileID: 786451788461918865, guid: 3cc9646b8660d314696bb4331a1d9a9f,
+        type: 3}
       propertyPath: m_LocalPosition.x
-      value: 11.301
+      value: 11.562
       objectReference: {fileID: 0}
     - target: {fileID: 786451788461918865, guid: 3cc9646b8660d314696bb4331a1d9a9f,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.476
+      value: -2.392
       objectReference: {fileID: 0}
     - target: {fileID: 786451788461918865, guid: 3cc9646b8660d314696bb4331a1d9a9f,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -19.55
+      value: -19.348
       objectReference: {fileID: 0}
     - target: {fileID: 786451788461918865, guid: 3cc9646b8660d314696bb4331a1d9a9f,
         type: 3}
@@ -8832,18 +8847,33 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2615027908531621245, guid: 33075e71dc239954a9ef1fbc8473a653,
         type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 2615027908531621245, guid: 33075e71dc239954a9ef1fbc8473a653,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 2615027908531621245, guid: 33075e71dc239954a9ef1fbc8473a653,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 2615027908531621245, guid: 33075e71dc239954a9ef1fbc8473a653,
+        type: 3}
       propertyPath: m_LocalPosition.x
-      value: 9.882893
+      value: 9.834
       objectReference: {fileID: 0}
     - target: {fileID: 2615027908531621245, guid: 33075e71dc239954a9ef1fbc8473a653,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.4494002
+      value: -2.404
       objectReference: {fileID: 0}
     - target: {fileID: 2615027908531621245, guid: 33075e71dc239954a9ef1fbc8473a653,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -20.196747
+      value: -20.158
       objectReference: {fileID: 0}
     - target: {fileID: 2615027908531621245, guid: 33075e71dc239954a9ef1fbc8473a653,
         type: 3}
@@ -15998,6 +16028,36 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rusted Metal Barrel_teraccgda_3d
+      objectReference: {fileID: 0}
+    - target: {fileID: 7295106738917328921, guid: 3cc9646b8660d314696bb4331a1d9a9f,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.3038824
+      objectReference: {fileID: 0}
+    - target: {fileID: 7295106738917328921, guid: 3cc9646b8660d314696bb4331a1d9a9f,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.3038824
+      objectReference: {fileID: 0}
+    - target: {fileID: 7295106738917328921, guid: 3cc9646b8660d314696bb4331a1d9a9f,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.3038824
+      objectReference: {fileID: 0}
+    - target: {fileID: 7295106738917328921, guid: 3cc9646b8660d314696bb4331a1d9a9f,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.00031138
+      objectReference: {fileID: 0}
+    - target: {fileID: 7295106738917328921, guid: 3cc9646b8660d314696bb4331a1d9a9f,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.002
+      objectReference: {fileID: 0}
+    - target: {fileID: 7295106738917328921, guid: 3cc9646b8660d314696bb4331a1d9a9f,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.000019073
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3cc9646b8660d314696bb4331a1d9a9f, type: 3}
