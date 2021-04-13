@@ -20,7 +20,7 @@ public class Movement : MonoBehaviour
 
     // Update is called once per frame
 
-    void Update()
+    void FixedUpdate()
     {
         if (!locked)
         {
@@ -31,8 +31,12 @@ public class Movement : MonoBehaviour
         //     GetComponent<AudioSource>().Play();
         //         StartCoroutine(FailSafe(0.1f));
         //  }
-        if (Input.GetButtonDown("Run"))
+    }
+    void Update(){
+        //print("updates");
+        if (Input.GetKeyDown(KeyCode.LeftShift))
         {
+            print("running");
             if (isOn == false && failSafe == false)
             {
                 failSafe = true;
