@@ -6,7 +6,30 @@ ModelImporter:
   - first:
       74: 5483963960573146552
     second: LightAnimation
-  externalObjects: {}
+  - first:
+      74: 1827226128182048838
+    second: Take 001
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _Metal
+    second: {fileID: 2100000, guid: 638ae394a3edea140968312e2cd6488e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _bulb
+    second: {fileID: 2100000, guid: 52530d0b6ead9014cb18091402c9fc27, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _glass
+    second: {fileID: 2100000, guid: 79c813bc92b2e4447a2fdf06aa2930c7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _lambert1
+    second: {fileID: 2100000, guid: 37027fb83e0420b4bab55c6f84b28488, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
