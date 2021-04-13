@@ -33,7 +33,6 @@ public class Movement : MonoBehaviour
         //  }
     }
     void Update(){
-        //print("updates");
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
             print("running");
