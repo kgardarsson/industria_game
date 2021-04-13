@@ -8,6 +8,7 @@ public class Interactor : MonoBehaviour
     public LayerMask interactLayer;
     public uint energyItTakes;
     public bool inRangeOfButton = false;
+    bool interactionAllowed = true;
 
     [SerializeField] private GameObject TypeMessage;
 
@@ -21,34 +22,52 @@ public class Interactor : MonoBehaviour
     void Update()
     {
 
-        // Raycasting
-        RaycastHit hit;
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        if (Physics.Raycast(ray, out hit, interactDistance, interactLayer))
+        if (interactionAllowed)
         {
-            if (hit.collider.gameObject.tag == "Button")
+            // Raycasting
+            RaycastHit hit;
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            if (Physics.Raycast(ray, out hit, interactDistance, interactLayer))
             {
-                energyItTakes = hit.collider.gameObject.GetComponent<EnergyContainer>().energyItTakes;
-                FindObjectOfType<RequiredEnergyText>().GetComponent<RequiredEnergyText>().UpdateEnergyMeter();
-                inRangeOfButton = true;
-
-                if (Input.GetMouseButtonDown(0))
+                if (hit.collider.gameObject.tag == "Button")
                 {
-                    hit.collider.gameObject.GetComponent<EnergyContainer>().interact();
+                    energyItTakes = hit.collider.gameObject.GetComponent<EnergyContainer>().energyItTakes;
+                    FindObjectOfType<RequiredEnergyText>().GetComponent<RequiredEnergyText>().UpdateEnergyMeter();
+                    inRangeOfButton = true;
+
+                    if (Input.GetMouseButtonDown(0))
+                    {
+                        hit.collider.gameObject.GetComponent<EnergyContainer>().interact();
+                    }
+                }
+                else
+                {
+                    energyItTakes = 0;
+                    inRangeOfButton = false;
+                }
+                // if (hit.collider.gameObject.tag == "Computer")
+                // {
+                //     if (Input.GetMouseButtonDown(0))
+                //     {
+                //         hit.transform.gameObject.GetComponent<CodeInput>().PressCode();
+                //     }
+                // }
+                if (hit.collider.gameObject.tag == "Keyboard")
+                {
+                    if (Input.GetMouseButtonDown(0))
+                    {
+
+                        Instantiate(TypeMessage);
+                    }
                 }
             }
             else
             {
-                energyItTakes = 0;
                 inRangeOfButton = false;
-            }
-            if (hit.collider.gameObject.tag == "Keyboard") {
-                if (Input.GetMouseButtonDown(0)) {
+                // Debug.Log("Did not Hit");
 
-                    Instantiate(TypeMessage);
-                }
             }
-            
+
             // if (hit.collider.gameObject.tag == "Computer")
             // {
             //     if (Input.GetMouseButtonDown(0))
@@ -57,11 +76,15 @@ public class Interactor : MonoBehaviour
             //     }
             // }
         }
-        else
-        {
-            inRangeOfButton = false;
-            // Debug.Log("Did not Hit");
+    }
 
-        }
+    public void enableInteraction()
+    {
+        interactionAllowed = true;
+    }
+
+    public void diableInteraction()
+    {
+        interactionAllowed = false;
     }
 }

@@ -13,7 +13,7 @@ Light:
   m_Shape: 0
   m_Color: {r: 0.246707, g: 0.8301887, b: 0.34433907, a: 1}
   m_Intensity: 39.788734
-  m_Range: 5
+  m_Range: 1
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -86,9 +86,9 @@ MonoBehaviour:
   m_LuxAtDistance: 1
   m_InnerSpotPercent: 0
   m_LightDimmer: 1
-  m_VolumetricDimmer: 1
+  m_VolumetricDimmer: 3
   m_LightUnit: 0
-  m_FadeDistance: 10000
+  m_FadeDistance: 20
   m_AffectDiffuse: 1
   m_AffectSpecular: 1
   m_NonLightmappedOnly: 0

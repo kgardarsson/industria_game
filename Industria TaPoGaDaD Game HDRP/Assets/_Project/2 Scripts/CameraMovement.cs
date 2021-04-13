@@ -8,6 +8,7 @@ public class CameraMovement : MonoBehaviour
     float rotationOnX;
     [SerializeField] float mouseSensitivity = 90f;
     public Transform Player;
+    public GameObject menu;
 
 
 
@@ -42,14 +43,17 @@ public class CameraMovement : MonoBehaviour
         {
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
-        }
-        if (Input.GetKey(KeyCode.Mouse0))
-        {
-            Cursor.lockState = CursorLockMode.Locked;
-            Cursor.visible = false;
+            this.transform.parent.gameObject.GetComponent<Movement>().disableMovement();
+            this.gameObject.GetComponent<Interactor>().diableInteraction();
+            menu.SetActive(true);
         }
 
     }
 
+    public void enableMovement()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+    }
 
 }
