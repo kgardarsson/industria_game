@@ -1,4 +1,57 @@
-﻿// using System.Collections;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+
+public class Footsteps : MonoBehaviour {
+
+  private AudioSource src;
+  public AudioClip[] steps_clips = new AudioClip[5];
+  public AudioClip[] clothes_clips = new AudioClip[5];
+  public AudioClip[] keys_clips = new AudioClip[3];
+  private bool walking;
+
+  private void Awake() {
+    src = GetComponent<AudioSource>();
+  }
+
+  private void Update() {
+    if (!walking && Input.GetAxis("Horizontal") + Input.GetAxis("Vertical") != 0) {
+      CancelInvoke();
+      InvokeRepeating("playStep", 0, .5f);
+      walking = true;
+    } else if (walking && Input.GetAxis("Horizontal") + Input.GetAxis("Vertical") == 0) {
+      CancelInvoke();
+      walking = false;
+    }
+  }
+
+  private void playStep() {
+    int rand = UnityEngine.Random.Range(0,steps_clips.Length);
+    src.PlayOneShot(steps_clips[rand]);
+
+    rand = UnityEngine.Random.Range(0,clothes_clips.Length);
+    src.PlayOneShot(clothes_clips[rand], .5f);
+
+    rand = UnityEngine.Random.Range(0,keys_clips.Length);
+    src.PlayOneShot(keys_clips[rand], .3f);
+  }
+}
+
+
+
+
+
+
+
+
+
+// -----------
+// Some old stuff below
+// -----------
+
+
+// using System.Collections;
 // using System.Collections.Generic;
 // using UnityEngine;
 
