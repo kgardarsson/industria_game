@@ -32,7 +32,8 @@ public class Movement : MonoBehaviour
         //         StartCoroutine(FailSafe(0.1f));
         //  }
     }
-    void Update(){
+    void Update()
+    {
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
             print("running");
@@ -75,6 +76,11 @@ public class Movement : MonoBehaviour
     public void disableMovement()
     {
         locked = true;
+    }
+
+    public bool getLockedMovement()
+    {
+        return locked;
     }
 
 }

@@ -5,11 +5,15 @@ using UnityEngine.SceneManagement;
 
 public class GameOver : MonoBehaviour
 {
-    public GameObject GameOverScreen;
+    // public GameObject GameOverScreen;
 
     private void OnTriggerEnter(Collider other)
     {
-        GameOverScreen.SetActive(true);
-        GameObject.Find("Player").GetComponent<Movement>().disableMovement();
+        // GameOverScreen.SetActive(true);
+        // GameObject.Find("Player").GetComponent<Movement>().disableMovement();
+
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
+
+
 }
