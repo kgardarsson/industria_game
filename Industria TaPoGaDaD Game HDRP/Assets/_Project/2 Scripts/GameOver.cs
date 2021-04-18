@@ -10,6 +10,6 @@ public class GameOver : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         GameOverScreen.SetActive(true);
-        //SceneManager.LoadScene("Level");
+        GameObject.Find("Player").GetComponent<Movement>().disableMovement();
     }
 }
