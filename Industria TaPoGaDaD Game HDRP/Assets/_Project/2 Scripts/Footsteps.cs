@@ -11,7 +11,9 @@ public class Footsteps : MonoBehaviour
     public AudioClip[] clothes_clips = new AudioClip[5];
     public AudioClip[] keys_clips = new AudioClip[3];
     private bool walking;
+    private bool running;
     Movement movement;
+    float repeatRate = .5f;
 
     private void Awake()
     {
@@ -22,12 +24,20 @@ public class Footsteps : MonoBehaviour
 
     private void Update()
     {
-        if (!movement.getLockedMovement())
+        if (!movement.isLockedMovement())
         {
+            if (running != movement.isRunning())
+            {
+                running = movement.isRunning();
+                repeatRate = movement.isRunning() ? .3f : .5f;
+                CancelInvoke();
+                InvokeRepeating("playStep", 0, repeatRate);
+            }
+
             if (!walking && Input.GetAxis("Horizontal") + Input.GetAxis("Vertical") != 0)
             {
                 CancelInvoke();
-                InvokeRepeating("playStep", 0, .5f);
+                InvokeRepeating("playStep", 0, repeatRate);
                 walking = true;
             }
             else if (walking && Input.GetAxis("Horizontal") + Input.GetAxis("Vertical") == 0)

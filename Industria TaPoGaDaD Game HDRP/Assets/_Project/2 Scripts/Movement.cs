@@ -10,6 +10,7 @@ public class Movement : MonoBehaviour
 
     public bool failSafe = false;
     bool locked;
+    bool running;
 
     // Start is called before the first frame update
 
@@ -34,28 +35,39 @@ public class Movement : MonoBehaviour
     }
     void Update()
     {
+        // if (Input.GetKeyDown(KeyCode.LeftShift))
+        // {
+        //     print("running");
+        //     if (isOn == false && failSafe == false)
+        //     {
+        //         failSafe = true;
+        //         mSpeed = 10;
+        //         isOn = true;
+        //         StartCoroutine(FailSafe(0.25f));
+
+        //     }
+
+        //     if (isOn == true && failSafe == false)
+        //     {
+        //         failSafe = true;
+        //         mSpeed = 5;
+
+        //         isOn = false;
+        //         StartCoroutine(FailSafe(0.25f));
+
+        //     }
+        // }
+
+        // Replaced the running code with this. Now running is not toggled on/off but you run when holding down shift.
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
-            print("running");
-            if (isOn == false && failSafe == false)
-            {
-                failSafe = true;
-                mSpeed = 10;
-                isOn = true;
-                StartCoroutine(FailSafe(0.25f));
-
-            }
-
-            if (isOn == true && failSafe == false)
-            {
-                failSafe = true;
-                mSpeed = 5;
-
-                isOn = false;
-                StartCoroutine(FailSafe(0.25f));
-
-            }
-
+            running = true;
+            mSpeed = 10;
+        }
+        if (Input.GetKeyUp(KeyCode.LeftShift))
+        {
+            running = false;
+            mSpeed = 5;
         }
 
 
@@ -78,9 +90,14 @@ public class Movement : MonoBehaviour
         locked = true;
     }
 
-    public bool getLockedMovement()
+    public bool isLockedMovement()
     {
         return locked;
+    }
+
+    public bool isRunning()
+    {
+        return running;
     }
 
 }
