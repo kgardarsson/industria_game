@@ -8,17 +8,18 @@ public class Menu : MonoBehaviour
     GameObject player;
     Movement movement;
     GameObject cam;
+    Footsteps footsteps;
 
     private void Awake()
     {
         player = GameObject.Find("Player");
         movement = player.GetComponent<Movement>();
         cam = player.gameObject.transform.GetChild(0).gameObject;
+        footsteps = GameObject.Find("SFXController").GetComponent<Footsteps>();
     }
 
     public void Resume()
     {
-        Debug.Log("resumed");
         cam.GetComponent<CameraMovement>().enableMovement();
         cam.GetComponent<Interactor>().enableInteraction();
         movement.enableMovement();

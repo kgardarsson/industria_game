@@ -12,6 +12,7 @@ public class Footsteps : MonoBehaviour
     public AudioClip[] keys_clips = new AudioClip[3];
     private bool walking;
     private bool running;
+    private bool locked;
     Movement movement;
     float repeatRate = .5f;
 
@@ -31,13 +32,13 @@ public class Footsteps : MonoBehaviour
                 running = movement.isRunning();
                 repeatRate = movement.isRunning() ? .3f : .5f;
                 CancelInvoke();
-                InvokeRepeating("playStep", 0, repeatRate);
+                InvokeRepeating("playStep", repeatRate, repeatRate);
             }
 
             if (!walking && Input.GetAxis("Horizontal") + Input.GetAxis("Vertical") != 0)
             {
                 CancelInvoke();
-                InvokeRepeating("playStep", 0, repeatRate);
+                InvokeRepeating("playStep", repeatRate, repeatRate);
                 walking = true;
             }
             else if (walking && Input.GetAxis("Horizontal") + Input.GetAxis("Vertical") == 0)
@@ -45,6 +46,10 @@ public class Footsteps : MonoBehaviour
                 CancelInvoke();
                 walking = false;
             }
+        }
+        else
+        {
+            CancelInvoke();
         }
     }
 
