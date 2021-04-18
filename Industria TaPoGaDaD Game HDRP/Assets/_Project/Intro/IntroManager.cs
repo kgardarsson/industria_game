@@ -10,12 +10,14 @@ public class IntroManager : MonoBehaviour
     public VideoClip firstClip;
     public VideoClip secondClip;
     public GameObject continueButton;
+    public AudioMixer audioMixer;
     VideoPlayer videoPlayer;
 
     bool paused;
 
     private void Start()
     {
+        StartCoroutine(FadeMixerGroup.StartFade(audioMixer, "AmbienceVolume", 5, 1, 0));
         GameObject camera = GameObject.Find("Main Camera");
         videoPlayer = camera.AddComponent<UnityEngine.Video.VideoPlayer>();
         videoPlayer.clip = firstClip;
@@ -39,6 +41,9 @@ public class IntroManager : MonoBehaviour
     public void Continue()
     {
         videoPlayer.Play();
+        // float delay = videoPlayer.clip.lengthfloat - 1;
+        
+        // StartCoroutine(FadeMixerGroup.StartFade(audioMixer, "AmbienceVolume", 5, 0, 5));
     }
 
     void EndReached(UnityEngine.Video.VideoPlayer vp)
