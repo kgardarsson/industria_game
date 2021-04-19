@@ -731,8 +731,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 2220860125
-  m_fontColor: {r: 0.8679245, g: 0.6345971, b: 0.3725525, a: 0.5176471}
+    rgba: 2217434764
+  m_fontColor: {r: 0.5471698, g: 0.36862603, b: 0.16776434, a: 0.5176471}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1155,7 +1155,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 2220860125
-  m_fontColor: {r: 0.8679245, g: 0.6345971, b: 0.3725525, a: 0.5176471}
+  m_fontColor: {r: 0.6431373, g: 0.43137255, b: 0.19215687, a: 0.59607846}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1289,7 +1289,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 2220860125
-  m_fontColor: {r: 0.8679245, g: 0.6345971, b: 0.3725525, a: 0.5176471}
+  m_fontColor: {r: 0.5471698, g: 0.36862603, b: 0.16776434, a: 0.5176471}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1680,8 +1680,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 2220860125
-  m_fontColor: {r: 0.8679245, g: 0.6345971, b: 0.3725525, a: 0.5176471}
+    rgba: 2217434764
+  m_fontColor: {r: 0.5471698, g: 0.36862603, b: 0.16776434, a: 0.5176471}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1814,8 +1814,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 2220860125
-  m_fontColor: {r: 0.8679245, g: 0.6345971, b: 0.3725525, a: 0.5176471}
+    rgba: 2217434764
+  m_fontColor: {r: 0.5471698, g: 0.36862603, b: 0.16776434, a: 0.5176471}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -2064,7 +2064,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.8679245, g: 0.6345971, b: 0.3725525, a: 0.5176471}
+  m_Color: {r: 0.6431373, g: 0.43137255, b: 0.19215687, a: 0.59607846}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
