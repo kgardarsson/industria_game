@@ -21115,11 +21115,6 @@ PrefabInstance:
       propertyPath: interactDistance
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 6800848900291028796, guid: 164ee0ae190e21045af1818074290b29,
-        type: 3}
-      propertyPath: m_audioClip
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 7457969802924927664, guid: 164ee0ae190e21045af1818074290b29,
         type: 3}
       propertyPath: m_RootOrder
