@@ -35,13 +35,15 @@ public class Footsteps : MonoBehaviour
                 InvokeRepeating("playStep", repeatRate, repeatRate);
             }
 
-            if (!walking && Input.GetAxis("Horizontal") + Input.GetAxis("Vertical") != 0)
+            bool walkKeyPressed = Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0;
+
+            if (!walking && walkKeyPressed)
             {
                 CancelInvoke();
                 InvokeRepeating("playStep", repeatRate, repeatRate);
                 walking = true;
             }
-            else if (walking && Input.GetAxis("Horizontal") + Input.GetAxis("Vertical") == 0)
+            else if (walking && !walkKeyPressed)
             {
                 CancelInvoke();
                 walking = false;
@@ -56,13 +58,13 @@ public class Footsteps : MonoBehaviour
     private void playStep()
     {
         int rand = UnityEngine.Random.Range(0, steps_clips.Length);
-        src.PlayOneShot(steps_clips[rand]);
+        src.PlayOneShot(steps_clips[rand], .4f);
 
         rand = UnityEngine.Random.Range(0, clothes_clips.Length);
-        src.PlayOneShot(clothes_clips[rand], .5f);
+        src.PlayOneShot(clothes_clips[rand], .3f);
 
         rand = UnityEngine.Random.Range(0, keys_clips.Length);
-        src.PlayOneShot(keys_clips[rand], .3f);
+        src.PlayOneShot(keys_clips[rand], .03f);
     }
 }
 
