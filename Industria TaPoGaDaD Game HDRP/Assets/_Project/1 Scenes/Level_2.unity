@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 49.075428, g: 35.363705, b: 29.394918, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1591,7 +1591,7 @@ MonoBehaviour:
       rangeCompressionFactor: 1
     influence:
       m_EditorAdvancedModeBlendDistancePositive: {x: 1, y: 1, z: 1}
-      m_EditorAdvancedModeBlendDistanceNegative: {x: 1, y: 1, z: 1}
+      m_EditorAdvancedModeBlendDistanceNegative: {x: 6.7196045, y: 1, z: 1}
       m_EditorSimplifiedModeBlendDistance: 1
       m_EditorAdvancedModeBlendNormalDistancePositive: {x: 0, y: 0, z: 0}
       m_EditorAdvancedModeBlendNormalDistanceNegative: {x: 0, y: 0, z: 0}
@@ -1605,7 +1605,7 @@ MonoBehaviour:
       m_Shape: 0
       m_BoxSize: {x: 16.552437, y: 8.467499, z: 8.75927}
       m_BoxBlendDistancePositive: {x: 1, y: 1, z: 1}
-      m_BoxBlendDistanceNegative: {x: 1, y: 1, z: 1}
+      m_BoxBlendDistanceNegative: {x: 6.7196045, y: 1, z: 1}
       m_BoxBlendNormalDistancePositive: {x: 0, y: 0, z: 0}
       m_BoxBlendNormalDistanceNegative: {x: 0, y: 0, z: 0}
       m_BoxSideFadePositive: {x: 1, y: 1, z: 1}
@@ -1622,7 +1622,7 @@ MonoBehaviour:
       m_SphereRadius: 1
     proxySettings:
       useInfluenceVolumeAsProxyVolume: 0
-      capturePositionProxySpace: {x: 0, y: 0, z: 0}
+      capturePositionProxySpace: {x: -2.5781622, y: 0, z: 0}
       captureRotationProxySpace: {x: 0, y: 0, z: 0, w: 1}
       mirrorPositionProxySpace: {x: 0, y: 0, z: 0}
       mirrorRotationProxySpace: {x: 0, y: 0, z: 0, w: 0}
@@ -1739,7 +1739,7 @@ MonoBehaviour:
     camera:
       camera: 0
   m_ProxyVolume: {fileID: 0}
-  m_BakedTexture: {fileID: 8900000, guid: b7ab9846316129b4c9be83b3dbbf38a8, type: 3}
+  m_BakedTexture: {fileID: 8900000, guid: c101c5f33310da84f8e5bdeeb5ea38dd, type: 3}
   m_CustomTexture: {fileID: 0}
   m_BakedRenderData:
     m_WorldToCameraRHS:
@@ -2548,8 +2548,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4681736093139114644, guid: 458f892e829ef1542b18d5236a1fb7da,
         type: 3}
+      propertyPath: m_ShadowNearPlane
+      value: 0.002
+      objectReference: {fileID: 0}
+    - target: {fileID: 4681736093139114644, guid: 458f892e829ef1542b18d5236a1fb7da,
+        type: 3}
       propertyPath: showAdditionalSettings
-      value: 12
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5177225764631611710, guid: 458f892e829ef1542b18d5236a1fb7da,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.394
       objectReference: {fileID: 0}
     - target: {fileID: 7489826815605132740, guid: 458f892e829ef1542b18d5236a1fb7da,
         type: 3}
@@ -5219,7 +5229,7 @@ MonoBehaviour:
     camera:
       camera: 0
   m_ProxyVolume: {fileID: 0}
-  m_BakedTexture: {fileID: 8900000, guid: c101c5f33310da84f8e5bdeeb5ea38dd, type: 3}
+  m_BakedTexture: {fileID: 8900000, guid: 9f7941eb42d5f7640a9aa79ad70250ff, type: 3}
   m_CustomTexture: {fileID: 0}
   m_BakedRenderData:
     m_WorldToCameraRHS:
@@ -7022,6 +7032,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6401746235473253212, guid: b806f77e4847a408bae6715f2905e8c3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7025818546929545938, guid: b806f77e4847a408bae6715f2905e8c3,
         type: 3}
@@ -13625,7 +13640,25 @@ MonoBehaviour:
   m_Script: {fileID: 82945081}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Entries: []
+  m_Entries:
+  - id: 0
+    category: 0
+    gameObject: {fileID: 1531419468}
+  - id: 1
+    category: 0
+    gameObject: {fileID: 1194101718}
+  - id: 2
+    category: 0
+    gameObject: {fileID: 2013107251}
+  - id: 3
+    category: 0
+    gameObject: {fileID: 1253795404}
+  - id: 4
+    category: 0
+    gameObject: {fileID: 104725171}
+  - id: 5
+    category: 0
+    gameObject: {fileID: 310228401}
 --- !u!4 &953947316
 Transform:
   m_ObjectHideFlags: 19
@@ -15175,6 +15208,11 @@ PrefabInstance:
         type: 3}
       propertyPath: Off.m_PersistentCalls.m_Calls.Array.data[11].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 3890623462890271214, guid: c9178d5c67862bf46b8cabf3995b9f08,
+        type: 3}
+      propertyPath: m_ShadowNearPlane
+      value: 0.002
       objectReference: {fileID: 0}
     - target: {fileID: 7489826815605132740, guid: c9178d5c67862bf46b8cabf3995b9f08,
         type: 3}
@@ -17965,7 +18003,7 @@ MonoBehaviour:
     camera:
       camera: 0
   m_ProxyVolume: {fileID: 0}
-  m_BakedTexture: {fileID: 8900000, guid: 9f7941eb42d5f7640a9aa79ad70250ff, type: 3}
+  m_BakedTexture: {fileID: 8900000, guid: cd6826c01f5d4b9468025ae304a84264, type: 3}
   m_CustomTexture: {fileID: 0}
   m_BakedRenderData:
     m_WorldToCameraRHS:
@@ -19365,7 +19403,7 @@ MonoBehaviour:
     camera:
       camera: 0
   m_ProxyVolume: {fileID: 0}
-  m_BakedTexture: {fileID: 8900000, guid: cd6826c01f5d4b9468025ae304a84264, type: 3}
+  m_BakedTexture: {fileID: 8900000, guid: 103d23042810728458d70aef9686628f, type: 3}
   m_CustomTexture: {fileID: 0}
   m_BakedRenderData:
     m_WorldToCameraRHS:
@@ -22951,7 +22989,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1531419468}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 59.33941, y: 3.1939998, z: 31.474293}
+  m_LocalPosition: {x: 63.824364, y: 3.1939998, z: 31.474293}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1668086178}
@@ -23080,8 +23118,8 @@ MonoBehaviour:
       fadeDistance: 10000
       rangeCompressionFactor: 1
     influence:
-      m_EditorAdvancedModeBlendDistancePositive: {x: 1, y: 1, z: 1}
-      m_EditorAdvancedModeBlendDistanceNegative: {x: 1, y: 1, z: 1}
+      m_EditorAdvancedModeBlendDistancePositive: {x: 6.573309, y: 1, z: 1}
+      m_EditorAdvancedModeBlendDistanceNegative: {x: 0.99999976, y: 1, z: 1}
       m_EditorSimplifiedModeBlendDistance: 1
       m_EditorAdvancedModeBlendNormalDistancePositive: {x: 0, y: 0, z: 0}
       m_EditorAdvancedModeBlendNormalDistanceNegative: {x: 0, y: 0, z: 0}
@@ -23093,9 +23131,9 @@ MonoBehaviour:
       m_ObsoleteSphereBaseOffset: {x: 0, y: 0, z: 0}
       m_ObsoleteOffset: {x: 0, y: 0, z: 0}
       m_Shape: 0
-      m_BoxSize: {x: 17.186733, y: 10, z: 11.131994}
-      m_BoxBlendDistancePositive: {x: 1, y: 1, z: 1}
-      m_BoxBlendDistanceNegative: {x: 1, y: 1, z: 1}
+      m_BoxSize: {x: 26.156654, y: 10, z: 11.131996}
+      m_BoxBlendDistancePositive: {x: 6.573309, y: 1, z: 1}
+      m_BoxBlendDistanceNegative: {x: 0.99999976, y: 1, z: 1}
       m_BoxBlendNormalDistancePositive: {x: 0, y: 0, z: 0}
       m_BoxBlendNormalDistanceNegative: {x: 0, y: 0, z: 0}
       m_BoxSideFadePositive: {x: 1, y: 1, z: 1}
@@ -23112,7 +23150,7 @@ MonoBehaviour:
       m_SphereRadius: 1
     proxySettings:
       useInfluenceVolumeAsProxyVolume: 0
-      capturePositionProxySpace: {x: 0, y: 0, z: 0}
+      capturePositionProxySpace: {x: -4.7445016, y: 0, z: 0}
       captureRotationProxySpace: {x: 0, y: 0, z: 0, w: 1}
       mirrorPositionProxySpace: {x: 0, y: 0, z: 0}
       mirrorRotationProxySpace: {x: 0, y: 0, z: 0, w: 0}
@@ -23229,7 +23267,7 @@ MonoBehaviour:
     camera:
       camera: 0
   m_ProxyVolume: {fileID: 0}
-  m_BakedTexture: {fileID: 8900000, guid: 291226555da82774d91a1c9f7656e58b, type: 3}
+  m_BakedTexture: {fileID: 8900000, guid: b7ab9846316129b4c9be83b3dbbf38a8, type: 3}
   m_CustomTexture: {fileID: 0}
   m_BakedRenderData:
     m_WorldToCameraRHS:
@@ -23334,7 +23372,7 @@ ReflectionProbe:
   m_TimeSlicingMode: 0
   m_Resolution: 128
   m_UpdateFrequency: 0
-  m_BoxSize: {x: 17.186733, y: 10, z: 11.131994}
+  m_BoxSize: {x: 26.156654, y: 10, z: 11.131996}
   m_BoxOffset: {x: 0, y: 0, z: 0}
   m_NearClip: 0.3
   m_FarClip: 1000
@@ -25740,6 +25778,11 @@ PrefabInstance:
       propertyPath: Off.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 3890623462890271214, guid: c9178d5c67862bf46b8cabf3995b9f08,
+        type: 3}
+      propertyPath: m_ShadowNearPlane
+      value: 0.002
+      objectReference: {fileID: 0}
     - target: {fileID: 7489826815605132740, guid: c9178d5c67862bf46b8cabf3995b9f08,
         type: 3}
       propertyPath: m_RootOrder
@@ -25758,7 +25801,7 @@ PrefabInstance:
     - target: {fileID: 7489826815605132740, guid: c9178d5c67862bf46b8cabf3995b9f08,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 31.661
+      value: 31.68
       objectReference: {fileID: 0}
     - target: {fileID: 7489826815605132740, guid: c9178d5c67862bf46b8cabf3995b9f08,
         type: 3}
@@ -31116,7 +31159,7 @@ MonoBehaviour:
     camera:
       camera: 0
   m_ProxyVolume: {fileID: 0}
-  m_BakedTexture: {fileID: 8900000, guid: 103d23042810728458d70aef9686628f, type: 3}
+  m_BakedTexture: {fileID: 8900000, guid: 291226555da82774d91a1c9f7656e58b, type: 3}
   m_CustomTexture: {fileID: 0}
   m_BakedRenderData:
     m_WorldToCameraRHS:
@@ -32341,6 +32384,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3967707482340346493, guid: b5fb0585e16c950458acc3e88a403457,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4433186985559042999, guid: b5fb0585e16c950458acc3e88a403457,
         type: 3}
